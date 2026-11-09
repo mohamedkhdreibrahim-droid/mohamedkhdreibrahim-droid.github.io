@@ -1,0 +1,19 @@
+Khidr AI | ٣ برومبتات جاهزة للأنيميشن
+
+ابدأ بصورة من شغلك أو عندك حق تستخدمها. ارفعها في أداة Image to Video،
+بدّل اللي بين الأقواس، واختار تجربة قصيرة. لو الأداة فيها اختيار منفصل
+للمدة أو المقاس، اضبطهم هناك كمان.
+
+١. إعلان منتج — مناسب لبرطمان أو عبوة
+Animate the provided [product] image. The product rises from the bottom and makes one slow quarter turn. Keep the shape and label consistent. End on the front-facing label, held still for one second. Fixed camera, vertical 9:16, 5 seconds.
+
+٢. تحريك شخصية مرسومة
+Animate the illustrated [character]. The character looks up, blinks once, and smiles gently. Preserve the face, clothes and colors. Keep the background and camera still. End on the smile. Vertical 9:16, 5 seconds.
+
+٣. عمق في صورة
+Create a slow camera push-in on the provided [scene]. The foreground moves slightly faster than the background. Preserve the composition and lighting. No new objects or cuts. End on [focal point]. Vertical 9:16, 5 seconds.
+
+لو شكل المنتج أو الشخصية اتغيّر، جرّب تقلّل شدة الحركة. لو الاسم اتشوّه،
+ثبّته على آخر كادر في المونتاج باستخدام الصورة الأصلية.
+
+https://mohamedkhdreibrahim-droid.github.io/#prompts
