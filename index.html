@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="ar" dir="rtl" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>محمد خضر | أنيميتور موشن جرافيك وفيديوهات بالذكاء الاصطناعي</title>
-  <meta name="description" content="محمد خضر، أنيميتور موشن جرافيك. إعلانات وريلز وفيديوهات بالذكاء الاصطناعي لبراندات وجمعيات وقنوات، من الفكرة لآخر فريم. شوف الشغل وكلّمني على واتساب.">
+  <title>Mohamed Khidr | Motion Graphics Animator & AI Video</title>
+  <meta name="description" content="Mohamed Khidr, motion graphics animator. Ads, reels and AI videos for brands, charities and TV channels, from first idea to final frame. See the work and message me on WhatsApp.">
   <link rel="canonical" href="https://mohamedkhdreibrahim-droid.github.io/">
-  <link rel="alternate" hreflang="ar" href="https://mohamedkhdreibrahim-droid.github.io/">
-  <link rel="alternate" hreflang="en" href="https://mohamedkhdreibrahim-droid.github.io/en/">
+  <link rel="alternate" hreflang="en" href="https://mohamedkhdreibrahim-droid.github.io/">
+  <link rel="alternate" hreflang="ar" href="https://mohamedkhdreibrahim-droid.github.io/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://mohamedkhdreibrahim-droid.github.io/">
   <link rel="icon" href="app-icon.png">
-  <meta property="og:title" content="محمد خضر | أنيميتور موشن جرافيك وفيديو بالذكاء الاصطناعي">
-  <meta property="og:description" content="موشن جرافيك، وأنيميشن شخصيات، وفيديوهات بالذكاء الاصطناعي. شوف البورتفوليو.">
+  <meta property="og:title" content="Mohamed Khidr | Motion Graphics Animator & AI Video">
+  <meta property="og:description" content="Motion graphics, character animation and AI video. See the portfolio.">
   <meta property="og:image" content="https://mohamedkhdreibrahim-droid.github.io/og.jpg">
   <meta name="theme-color" content="#06261c">
   <meta name="twitter:card" content="summary_large_image">
@@ -19,7 +20,7 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mohamed Khidr", "alternateName": "\u0645\u062d\u0645\u062f \u062e\u0636\u0631", "jobTitle": "Motion Graphics Animator & AI Video Creator", "url": "https://mohamedkhdreibrahim-droid.github.io/", "image": "https://mohamedkhdreibrahim-droid.github.io/media/mohamed.jpg", "telephone": "+201558664894", "knowsAbout": ["Motion graphics", "2D character animation", "AI video generation", "Kinetic typography", "After Effects", "Premiere Pro"], "sameAs": ["https://www.youtube.com/@mohamedibrahimkhdre", "https://www.instagram.com/mohamed__khidr/", "https://www.tiktok.com/@khidr_ai", "https://www.facebook.com/khidrai.eg"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script>
     (function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('kh-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
   </script>
@@ -27,8 +28,8 @@
     :root{
       --gold:#c9a45c; --gold-2:#e6cf98; --gold-ink:#8a6a2b;
       --emerald:#0b3d2e; --emerald-2:#0f5240;
-      --f-display:"El Messiri","IBM Plex Sans Arabic",serif;
-      --f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+      --f-display:"Playfair Display",Georgia,serif;
+      --f-body:"Inter","Segoe UI",system-ui,sans-serif;
       --r-lg:28px; --r-md:18px; --ease:cubic-bezier(.2,.7,.2,1);
     }
     [data-theme="dark"]{
@@ -208,6 +209,23 @@
     .viewer-body iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:18px;background:#000}
     .viewer-title{text-align:center;margin-top:.8rem;font-family:var(--f-display);font-size:18px}
     .viewer .close{position:fixed;top:16px;left:16px;background:rgba(6,38,28,.85);color:#f4eedf;font-size:16px;z-index:2}
+    /* gifts */
+    .gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .gift{position:relative;padding:clamp(26px,3vw,36px);border-radius:var(--r-lg);background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:.9rem;transition:transform .45s var(--ease),box-shadow .45s}
+    .gift:hover{transform:translateY(-5px);box-shadow:0 30px 60px -30px var(--glow)}
+    .gift p{color:var(--muted);font-size:16px}
+    .gift .btn{align-self:flex-start;margin-top:auto}
+    .gtag{position:absolute;top:22px;inset-inline-end:22px;font-size:12px;font-weight:600;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:.2rem .7rem;direction:ltr}
+    .gift-links{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:auto}
+    .gift-links .btn{margin-top:0}
+    .gift.wide{grid-column:1/-1}
+    .tools{list-style:none;margin:.4rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .tools a{display:flex;flex-direction:column;gap:.2rem;height:100%;padding:1rem 1.1rem;border-radius:16px;border:1px solid var(--line-soft);transition:border-color .3s}
+    .tools a:hover{border-color:var(--gold)}
+    .tools b{font-family:var(--f-display);font-size:18px}
+    .tools span{font-size:14px;color:var(--muted)}
+    @media(max-width:1000px){.gifts{grid-template-columns:1fr 1fr}.tools{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){.gifts,.tools{grid-template-columns:1fr}}
     /* skills */
     .skills{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
     .bars{display:grid;gap:1.4rem}
@@ -256,6 +274,14 @@
     .btn-line.light:hover{border-color:var(--gold)}
     @media(max-width:420px){.form-actions{grid-template-columns:1fr}}
     .lang{font-size:13px;font-weight:600;font-family:Inter,system-ui,sans-serif}
+    .bar .fill{transform-origin:left}
+    .marquee::before{background:linear-gradient(to right,var(--bg),transparent)}
+    .marquee::after{background:linear-gradient(to left,var(--bg),transparent)}
+    @keyframes slideL{to{transform:translateX(-50%)}}
+    .track{animation-name:slideL}
+    .h1{letter-spacing:-.02em}
+    .badge-float.two{inset-inline-end:auto;inset-inline-start:-26%}
+    @media(max-width:720px){.badge-float.two{inset-inline-start:-10%}}
     /* footer */
     footer{padding:48px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line-soft);color:var(--muted);font-size:14px}
     footer .wrap{padding-left:84px;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
@@ -316,7 +342,7 @@
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">روح للمحتوى</a>
+  <a class="skip" href="#main">Skip to content</a>
 
   <!-- svg sprite -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -338,21 +364,22 @@
 
   <header class="nav" id="nav">
     <div class="wrap">
-      <a class="brand" href="#top" aria-label="Khidr AI، الصفحة الرئيسية"><span class="brand-mark" aria-hidden="true">خ</span><span dir="ltr">Khidr AI</span></a>
-      <nav aria-label="التنقل الرئيسي">
+      <a class="brand" href="#top" aria-label="Khidr AI, home"><span class="brand-mark" aria-hidden="true">K</span><span dir="ltr">Khidr AI</span></a>
+      <nav aria-label="Main navigation">
         <ul class="menu">
-          <li><a href="#services">الخدمات</a></li>
-          <li><a href="#work">الشغل</a></li>
-          <li><a href="#process">طريقتنا</a></li>
-          <li><a href="#faq">الأسئلة</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#gifts">Gifts</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
-        <a class="icon-btn lang" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
-        <button class="icon-btn" id="theme" type="button" aria-label="تبديل الوضع الفاتح والداكن">
+        <a class="icon-btn lang" href="ar/" hreflang="ar" lang="ar" aria-label="النسخة العربية">ع</a>
+        <button class="icon-btn" id="theme" type="button" aria-label="Toggle light and dark mode">
           <svg aria-hidden="true"><use href="#i-sun"/></svg>
         </button>
-        <a class="btn btn-gold" href="#contact"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>ابدأ مجانًا</span></a>
+        <a class="btn btn-gold" href="#contact"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Start free</span></a>
       </div>
     </div>
   </header>
@@ -364,46 +391,46 @@
       <div class="orb b" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div>
-          <span class="kicker rv">أنيميتور · موشن جرافيك · فيديو بالذكاء الاصطناعي</span>
-          <h1 id="hero-t" class="display h1 rv" style="--i:1"><span class="nw">حركة توقّف الصابع.</span><br><span class="gold nw">وفيديو يبيع الفكرة.</span></h1>
-          <p class="lede rv" style="--i:2">أنا محمد خضر، أنيميتور موشن جرافيك. بعمل إعلانات وريلز وفيديوهات بالذكاء الاصطناعي لبراندات وجمعيات وقنوات، من أول فكرة لحد آخر فريم.</p>
+          <span class="kicker rv">Animator · Motion Graphics · AI Video</span>
+          <h1 id="hero-t" class="display h1 rv" style="--i:1"><span class="nw">Motion that stops the scroll.</span><br><span class="gold nw">Video that sells the idea.</span></h1>
+          <p class="lede rv" style="--i:2">I’m Mohamed Khidr, a motion graphics animator. I make ads, reels and AI videos for brands, charities and channels, from the first idea to the final frame.</p>
           <div class="actions rv" style="--i:3">
-            <a class="btn btn-gold" href="#contact"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابعت فكرتك على واتساب</a>
-            <a class="btn btn-line" href="#work">شوف البورتفوليو</a>
+            <a class="btn btn-gold" href="#contact"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send your idea on WhatsApp</a>
+            <a class="btn btn-line" href="#work">See the portfolio</a>
           </div>
           <div class="trust rv" style="--i:4">
-            <span><i></i>اشتغلنا مع <b>قناة بينونة</b></span>
-            <span><i></i>رد خلال <b>24 ساعة</b></span>
-            <span><i></i><b>0</b> جنيه تكلفة</span>
+            <span><i></i>Worked with <b>Baynounah TV</b></span>
+            <span><i></i>Reply within <b>24 hours</b></span>
+            <span><i></i><b>0</b> cost to start</span>
           </div>
         </div>
         <div class="device-wrap rv" style="--i:2">
           <div class="device">
-            <video src="media/work/showreel.mp4" poster="media/work/showreel.jpg" muted loop playsinline autoplay preload="metadata" aria-label="شوريل: لقطات من شغلي"></video>
+            <video src="media/work/showreel.mp4" poster="media/work/showreel.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Showreel: highlights from my work"></video>
           </div>
-          <div class="badge-float one" aria-hidden="true"><b>AI</b> فيديو بالذكاء الاصطناعي</div>
-          <div class="badge-float two" aria-hidden="true"><b>+55</b> فيديو في البورتفوليو</div>
+          <div class="badge-float one" aria-hidden="true"><b>AI</b> AI video</div>
+          <div class="badge-float two" aria-hidden="true"><b>+55</b> videos in the portfolio</div>
         </div>
       </div>
     </section>
 
     <!-- CLIENTS MARQUEE -->
-    <section class="marquee" aria-label="جهات اشتغلنا معها">
-      <p class="marquee-label">جهات وقنوات اشتغلنا معها</p>
+    <section class="marquee" aria-label="Clients">
+      <p class="marquee-label">Brands, charities and channels I’ve worked with</p>
       <div class="track" aria-hidden="true">
-        <span>قناة بينونة</span><span>منصة سند</span><span>جمعية مشارق</span><span>جمعية مستورة</span><span>جمعية ابناؤنا</span><span>جمعية حائل</span>
-        <span>قناة بينونة</span><span>منصة سند</span><span>جمعية مشارق</span><span>جمعية مستورة</span><span>جمعية ابناؤنا</span><span>جمعية حائل</span>
+        <span>Baynounah TV</span><span>Sanad Platform</span><span>Mashareq Charity</span><span>Mastoura Charity</span><span>Abnaouna Charity</span><span>Hail Charity</span>
+        <span>Baynounah TV</span><span>Sanad Platform</span><span>Mashareq Charity</span><span>Mastoura Charity</span><span>Abnaouna Charity</span><span>Hail Charity</span>
       </div>
     </section>
 
     <!-- STATS -->
-    <section class="sec" aria-label="أرقامنا" style="padding-bottom:0">
+    <section class="sec" aria-label="Numbers" style="padding-bottom:0">
       <div class="wrap">
         <div class="stats rv">
-          <div class="stat"><b data-count="55" data-suffix="+">0</b><span>فيديو في البورتفوليو</span></div>
-          <div class="stat"><b data-count="6">0</b><span>جهات وقنوات اشتغلت معاها</span></div>
-          <div class="stat"><b data-count="24" data-suffix="h">0</b><span>أقصى وقت للرد عليك</span></div>
-          <div class="stat"><b data-count="5">0</b><span>خدمات في مكان واحد</span></div>
+          <div class="stat"><b data-count="55" data-suffix="+">0</b><span>videos in the portfolio</span></div>
+          <div class="stat"><b data-count="6">0</b><span>clients and channels</span></div>
+          <div class="stat"><b data-count="24" data-suffix="h">0</b><span>max reply time</span></div>
+          <div class="stat"><b data-count="5">0</b><span>services in one place</span></div>
         </div>
       </div>
     </section>
@@ -412,13 +439,13 @@
     <section class="sec" id="why" aria-labelledby="why-t">
       <div class="wrap">
         <div class="sec-head">
-          <span class="kicker rv">ليه تشتغل معايا</span>
-          <h2 id="why-t" class="display h2 rv" style="--i:1">عين أنيميتور.<br><span class="gold">وسرعة الذكاء الاصطناعي.</span></h2>
+          <span class="kicker rv">Why work with me</span>
+          <h2 id="why-t" class="display h2 rv" style="--i:1">An animator’s eye.<br><span class="gold">At the speed of AI.</span></h2>
         </div>
         <div class="features">
-          <article class="feat rv"><span class="num">01</span><h3 class="h3">حركة مدروسة، مش زينة</h3><p>كل حركة ليها سبب: توقيت، وEasing، وإيقاع ماشي مع الكلام. عشان العين تفضل مع الفيديو لآخره.</p></article>
-          <article class="feat rv" style="--i:1"><span class="num">02</span><h3 class="h3">عربي من الأساس</h3><p>كاينتك تايبوجرافي بالخط العربي واخد حقه، وسكريبت بلهجة جمهورك، وفويس متشكّل صح.</p></article>
-          <article class="feat rv" style="--i:2"><span class="num">03</span><h3 class="h3">AI في المكان الصح</h3><p>اللقطات اللي كانت محتاجة تصوير أو أسبوع رسم، بتتولّد بالذكاء الاصطناعي، والأنيميتور بيظبطها لحد ما تبقى جزء من الحكاية.</p></article>
+          <article class="feat rv"><span class="num">01</span><h3 class="h3">Motion with a purpose</h3><p>Every move has a reason: timing, easing, and rhythm that follows the voice, so the eye stays to the very last frame.</p></article>
+          <article class="feat rv" style="--i:1"><span class="num">02</span><h3 class="h3">Arabic-first</h3><p>Kinetic typography that respects Arabic letterforms, scripts in your audience’s dialect, and properly voiced narration.</p></article>
+          <article class="feat rv" style="--i:2"><span class="num">03</span><h3 class="h3">AI where it counts</h3><p>Shots that once needed a film crew or a week of drawing are generated with AI, then finished by an animator until they belong to the story.</p></article>
         </div>
       </div>
     </section>
@@ -427,15 +454,15 @@
     <section class="sec" id="services" aria-labelledby="svc-t" style="padding-top:0">
       <div class="wrap">
         <div class="sec-head">
-          <span class="kicker rv">الخدمات</span>
-          <h2 id="svc-t" class="display h2 rv" style="--i:1">من لوجو بيتحرك<br><span class="gold nw">لإعلان كامل.</span></h2>
+          <span class="kicker rv">Services</span>
+          <h2 id="svc-t" class="display h2 rv" style="--i:1">From a moving logo<br><span class="gold nw">to a full ad.</span></h2>
         </div>
         <div class="services">
-          <article class="svc rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-play"/></svg></div><h3 class="h3">موشن جرافيك للسوشيال</h3><p>ريلز وإعلانات 9:16 بعناوين متحركة وأرقام وانتقالات، بتوقّف الصابع في أول ثانية.</p><span class="tag">مجانًا · تسليم خلال 48 ساعة</span></article>
-          <article class="svc rv" style="--i:1"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div><h3 class="h3">فيديوهات بالذكاء الاصطناعي</h3><p>مشاهد ولقطات بأحدث موديلات الفيديو، بشخصيات ثابتة وستايل موحّد من أول لقطة لآخرها.</p><span class="tag">مجانًا</span></article>
-          <article class="svc rv" style="--i:2"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><h3 class="h3">أنيميشن شخصيات وإكسبلينر</h3><p>شخصية لبراندك أو جمعيتك تشرح الفكرة وتفضل في دماغ الناس، زي شخصية منصة سند.</p><span class="tag">مجانًا</span></article>
-          <article class="svc rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-play"/></svg></div><h3 class="h3">لوجو أنيميشن وهوية متحركة</h3><p>لوجو بيتحرك، وانترو وأوترو، وعناصر متحركة لحساباتك بنفس روح البراند.</p><span class="tag">مجانًا</span></article>
-          <article class="svc wide rv" style="--i:1"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div><h3 class="h3">فيديو كامل من الألف للياء</h3><p>سكريبت، وفويس أوفر بالعربي، وموشن، وأنيميشن، ولقطات بالذكاء الاصطناعي، في ملف واحد جاهز للنشر على كل المنصات.</p><a class="btn btn-gold" href="#contact"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابدأ مشروعك</a></article>
+          <article class="svc rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-play"/></svg></div><h3 class="h3">Social motion graphics</h3><p>9:16 reels and ads with animated titles, numbers and transitions that stop the scroll in the first second.</p><span class="tag">Free · delivered in 48 hours</span></article>
+          <article class="svc rv" style="--i:1"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div><h3 class="h3">AI video production</h3><p>Scenes and shots from the latest video models, with consistent characters and one unified style from the first shot to the last.</p><span class="tag">Free</span></article>
+          <article class="svc rv" style="--i:2"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><h3 class="h3">Character animation & explainers</h3><p>A character for your brand or charity that explains the idea and stays in people’s minds, like the Sanad Platform character.</p><span class="tag">Free</span></article>
+          <article class="svc rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-play"/></svg></div><h3 class="h3">Logo animation & motion identity</h3><p>Animated logos, intros and outros, and motion elements for your accounts in your brand’s spirit.</p><span class="tag">Free</span></article>
+          <article class="svc wide rv" style="--i:1"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div><h3 class="h3">End-to-end video</h3><p>Script, Arabic voice-over, motion, animation and AI shots, delivered as one file ready for every platform.</p><a class="btn btn-gold" href="#contact"><svg aria-hidden="true"><use href="#i-wa"/></svg>Start your project</a></article>
         </div>
       </div>
     </section>
@@ -444,14 +471,14 @@
     <section class="sec" id="process" aria-labelledby="pr-t" style="background:var(--bg-2)">
       <div class="wrap">
         <div class="sec-head">
-          <span class="kicker rv">طريقة شغلنا</span>
-          <h2 id="pr-t" class="display h2 rv" style="--i:1">من رسالة واتساب<br><span class="gold">لمحتوى منشور.</span></h2>
+          <span class="kicker rv">How I work</span>
+          <h2 id="pr-t" class="display h2 rv" style="--i:1">From a WhatsApp message<br><span class="gold">to published content.</span></h2>
         </div>
         <div class="process">
-          <div class="step rv"><h3 class="h3">ابعت فكرتك</h3><p>رسالة واحدة على واتساب: إيه مشروعك، وإيه اللي محتاجه.</p></div>
-          <div class="step rv" style="--i:1"><h3 class="h3">ستوري بورد</h3><p>بسألك كام سؤال عن جمهورك وستايلك، وبعتلك ستايل فريمز قبل ما أبدأ أحرّك.</p></div>
-          <div class="step rv" style="--i:2"><h3 class="h3">أحرّك وأولّد</h3><p>الأنيميشن بإيد أنيميتور، واللقطات الصعبة بالذكاء الاصطناعي، والاتنين في ستايل واحد.</p></div>
-          <div class="step rv" style="--i:3"><h3 class="h3">تستلم وتنشر</h3><p>بتراجع، وتعدّل بالكلام، وتاخد الملف جاهز للنشر.</p></div>
+          <div class="step rv"><h3 class="h3">Send your idea</h3><p>One WhatsApp message: what your project is and what you need.</p></div>
+          <div class="step rv" style="--i:1"><h3 class="h3">Storyboard</h3><p>A few questions about your audience and style, then style frames before any animation starts.</p></div>
+          <div class="step rv" style="--i:2"><h3 class="h3">Animate & generate</h3><p>Hand-crafted animation, the hard shots generated with AI, both in one style.</p></div>
+          <div class="step rv" style="--i:3"><h3 class="h3">Deliver & publish</h3><p>You review, request changes in plain words, and get a file ready to post.</p></div>
         </div>
       </div>
     </section>
@@ -460,52 +487,76 @@
     <section class="sec" id="work" aria-labelledby="wk-t">
       <div class="wrap">
         <div class="sec-head">
-          <span class="kicker rv">البورتفوليو</span>
-          <h2 id="wk-t" class="display h2 rv" style="--i:1">الكلام سهل.<br><span class="gold">ده اللي عملناه.</span></h2>
-          <p class="lede rv" style="--i:2">إعلانات لبراندات، وحملات لجمعيات خيرية، ومحتوى لقنوات ومنصات. اضغط على أي شغل يشتغل بالصوت.</p>
+          <span class="kicker rv">Portfolio</span>
+          <h2 id="wk-t" class="display h2 rv" style="--i:1">Talk is cheap.<br><span class="gold">Here’s the work.</span></h2>
+          <p class="lede rv" style="--i:2">Ads for brands, campaigns for charities, and content for channels and platforms. Tap any piece to play it with sound.</p>
         </div>
         <div class="work-tools rv">
-          <div class="filters" role="group" aria-label="فلترة الشغل">
-            <button class="chip" type="button" data-filter="all" aria-pressed="true">الكل</button>
-            <button class="chip" type="button" data-filter="ads" aria-pressed="false">إعلانات</button>
-            <button class="chip" type="button" data-filter="charity" aria-pressed="false">جمعيات خيرية</button>
-            <button class="chip" type="button" data-filter="social" aria-pressed="false">سوشيال</button>
-            <button class="chip" type="button" data-filter="motion" aria-pressed="false">موشن</button>
-            <button class="chip" type="button" data-filter="hooks" aria-pressed="false">هوكات</button>
-            <button class="chip" type="button" data-filter="voice" aria-pressed="false">فويس</button>
-            <button class="chip" type="button" data-filter="youtube" aria-pressed="false">على يوتيوب</button>
+          <div class="filters" role="group" aria-label="Filter the work">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="ads" aria-pressed="false">Ads</button>
+            <button class="chip" type="button" data-filter="charity" aria-pressed="false">Charities</button>
+            <button class="chip" type="button" data-filter="social" aria-pressed="false">Social</button>
+            <button class="chip" type="button" data-filter="motion" aria-pressed="false">Motion</button>
+            <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI</button>
+            <button class="chip" type="button" data-filter="hooks" aria-pressed="false">Hooks</button>
+            <button class="chip" type="button" data-filter="voice" aria-pressed="false">Voice</button>
+            <button class="chip" type="button" data-filter="youtube" aria-pressed="false">On YouTube</button>
           </div>
-          <label class="search"><span class="sr">ابحث في الشغل</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="ابحث: سند، بيبسي، الإمارات…" autocomplete="off"></label>
+          <label class="search"><span class="sr">Search the work</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search: Sanad, UAE, charity…" autocomplete="off"></label>
         </div>
         <div class="work" id="work-grid" aria-live="polite"></div>
-        <p class="empty" id="work-empty" hidden>مفيش نتايج. جرّب كلمة تانية.</p>
+        <p class="empty" id="work-empty" hidden>No results. Try another word.</p>
         <div class="work-more">
-          <button class="btn btn-line" id="more" type="button">اعرض شغل أكتر</button>
-          <a class="btn btn-line" href="https://www.youtube.com/playlist?list=PLVRoP6kZG3Zm2JBJ8smNxE9Qyfwyysv6R" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt"/></svg>القائمة كاملة على يوتيوب</a>
+          <button class="btn btn-line" id="more" type="button">Show more work</button>
+          <a class="btn btn-line" href="https://www.youtube.com/playlist?list=PLVRoP6kZG3Zm2JBJ8smNxE9Qyfwyysv6R" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt"/></svg>Full playlist on YouTube</a>
         </div>
       </div>
     </section>
 
-    <dialog class="viewer" id="viewer" aria-label="عرض الشغل">
-      <button class="icon-btn close" id="viewer-close" type="button" aria-label="إغلاق">✕</button>
+    <dialog class="viewer" id="viewer" aria-label="Work viewer">
+      <button class="icon-btn close" id="viewer-close" type="button" aria-label="Close">✕</button>
       <div class="viewer-body" id="viewer-body"></div>
       <p class="viewer-title" id="viewer-title"></p>
     </dialog>
+
+    <!-- GIFTS -->
+    <section class="sec" id="gifts" aria-labelledby="gf-t" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kicker rv">Free gifts</span>
+          <h2 id="gf-t" class="display h2 rv" style="--i:1">Free to take.<br><span class="gold">Use them today.</span></h2>
+          <p class="lede rv" style="--i:2">Tools I use in my own work, ready to download. All licensed for commercial use.</p>
+        </div>
+        <div class="gifts">
+          <article class="gift rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div><span class="gtag">ZIP · 0.6 MB</span><h3 class="h3">Motion graphics skill for Claude</h3><p>My full method for 9:16 motion reels, packaged as a Claude Code skill, plus a ready reel template you can edit and render.</p><a class="btn btn-gold" href="gifts/khidr-motion-graphics-skill.zip" download>Download the skill</a></article>
+          <article class="gift rv" style="--i:1"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-mic"/></svg></div><span class="gtag">ZIP · 27 MB · CC0</span><h3 class="h3">Sound effects pack</h3><p>113 sound effects and 15 music tracks, CC0: use them in commercial and monetized videos with no attribution.</p><a class="btn btn-gold" href="gifts/khidr-sfx-pack-cc0.zip" download>Download the pack</a></article>
+          <article class="gift rv" style="--i:2"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><span class="gtag">TXT</span><h3 class="h3">Ready animation prompts</h3><p>Prompts to animate products, characters and scenes with AI, plus a pre-publish checklist.</p><div class="gift-links"><a class="btn btn-gold" href="gifts/animation-prompts.txt" download>Prompts</a><a class="btn btn-line" href="gifts/animation-checklist.txt" download>Checklist</a></div></article>
+          <article class="gift wide rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-play"/></svg></div><h3 class="h3">Free plugins I recommend</h3><p>Free After Effects plugins from their official sources. Download from the makers themselves for the latest, safe version.</p>
+            <ul class="tools">
+              <li><a href="https://www.videocopilot.net/blog/2016/03/new-plugin-saber-now-available-free/" target="_blank" rel="noopener"><b>Saber</b><span>Light, neon and energy · Video Copilot</span></a></li>
+              <li><a href="https://www.videocopilot.net/blog/2017/03/new-free-plug-in-fx-console/" target="_blank" rel="noopener"><b>FX Console</b><span>Quick effect search · Video Copilot</span></a></li>
+              <li><a href="https://aescripts.com/bodymovin/" target="_blank" rel="noopener"><b>Bodymovin</b><span>Export motion as Lottie for web and apps</span></a></li>
+              <li><a href="https://aescripts.com/learn/zxp-installer/" target="_blank" rel="noopener"><b>ZXP Installer</b><span>Install any ZXP extension easily</span></a></li>
+            </ul></article>
+        </div>
+      </div>
+    </section>
 
     <!-- ABOUT + SKILLS -->
     <section class="sec" id="about" aria-labelledby="ab-t" style="background:var(--bg-2)">
       <div class="wrap skills">
         <div>
-          <img class="portrait rv" src="media/mohamed.jpg" alt="محمد خضر" width="96" height="96" loading="lazy">
-          <span class="kicker rv">مين أنا</span>
-          <h2 id="ab-t" class="display h2 rv" style="--i:1" >محمد خضر.<br><span class="gold">أنيميتور موشن جرافيك.</span></h2>
-          <p class="lede rv" style="--i:2;margin-top:1.2rem">اشتغلت مع قنوات فضائية زي بينونة، ومع منصات وجمعيات زي سند ومشارق ومستورة. بجمع بين حرفية الأنيميشن وأدوات الفيديو بالذكاء الاصطناعي، عشان فكرتك تطلع بجودة شاشة وفي وقت أقل.</p>
+          <img class="portrait rv" src="media/mohamed.jpg" alt="Mohamed Khidr" width="96" height="96" loading="lazy">
+          <span class="kicker rv">About me</span>
+          <h2 id="ab-t" class="display h2 rv" style="--i:1" >Mohamed Khidr.<br><span class="gold">Motion graphics animator.</span></h2>
+          <p class="lede rv" style="--i:2;margin-top:1.2rem">I’ve worked with TV channels like Baynounah, and with platforms and charities like Sanad, Mashareq and Mastoura. I combine animation craft with AI video tools, so your idea reaches broadcast quality in less time.</p>
         </div>
         <div class="bars rv" style="--i:2">
-          <div class="bar" style="--v:96%"><label>موشن جرافيك وكاينتك تايبوجرافي<span>96%</span></label><div class="track-b"><div class="fill"></div></div></div>
-          <div class="bar" style="--v:94%"><label>After Effects وPremiere Pro<span>94%</span></label><div class="track-b"><div class="fill"></div></div></div>
-          <div class="bar" style="--v:92%"><label>فيديو بالذكاء الاصطناعي<span>92%</span></label><div class="track-b"><div class="fill"></div></div></div>
-          <div class="bar" style="--v:88%"><label>أنيميشن شخصيات وإكسبلينر<span>88%</span></label><div class="track-b"><div class="fill"></div></div></div>
+          <div class="bar" style="--v:96%"><label>Motion graphics & kinetic type<span>96%</span></label><div class="track-b"><div class="fill"></div></div></div>
+          <div class="bar" style="--v:94%"><label>After Effects & Premiere Pro<span>94%</span></label><div class="track-b"><div class="fill"></div></div></div>
+          <div class="bar" style="--v:92%"><label>AI video<span>92%</span></label><div class="track-b"><div class="fill"></div></div></div>
+          <div class="bar" style="--v:88%"><label>Character animation & explainers<span>88%</span></label><div class="track-b"><div class="fill"></div></div></div>
         </div>
       </div>
     </section>
@@ -516,15 +567,15 @@
     <section class="sec" id="faq" aria-labelledby="fq-t" style="padding-top:0">
       <div class="wrap">
         <div class="sec-head center">
-          <span class="kicker rv">أسئلة شائعة</span>
-          <h2 id="fq-t" class="display h2 rv" style="--i:1">قبل ما تسأل…</h2>
+          <span class="kicker rv">FAQ</span>
+          <h2 id="fq-t" class="display h2 rv" style="--i:1">Before you ask…</h2>
         </div>
         <div class="faq">
-          <details class="rv"><summary>هو مجاني بجد؟ فين الحركة؟</summary><p class="ans">مجاني بجد. احنا بنبني بورتفوليو وجمهور، وكل مشروع بنعمله هو دليل بنوريه للناس. كل اللي بنطلبه إننا نقدر نعرض الشغل (ولو مش عايز، قول وبس).</p></details>
-          <details class="rv" style="--i:1"><summary>هاخد الشغل في قد إيه؟</summary><p class="ans">ريل أو سكريبت أو فويس بيتسلّم عادة خلال 48 ساعة من ما نتفق على الخطة. وبنرد على رسالتك الأولى خلال 24 ساعة.</p></details>
-          <details class="rv" style="--i:2"><summary>إيه الفرق بين الموشن جرافيك وفيديو الذكاء الاصطناعي؟</summary><p class="ans">الموشن جرافيك عناوين وأشكال وأيقونات بتتحرك بتصميم مدروس، والذكاء الاصطناعي بيولّد مشاهد ولقطات واقعية أو كرتونية. أغلب الشغل الحلو بيجمع الاتنين، وده تخصصي.</p></details>
-          <details class="rv" style="--i:3"><summary>مين صاحب حقوق الشغل؟</summary><p class="ans">انت. الملفات النهائية بتاعتك تستخدمها زي ما تحب. وبنستخدم أصوات وموسيقى مرخّصة أو مجانية الاستخدام بس.</p></details>
-          <details class="rv" style="--i:4"><summary>ينفع تعمل الصوت بصوتي أنا؟</summary><p class="ans">أيوه. بتسجّل دقيقة واحدة نضيفة، ونعمل منها نسخة من صوتك تقرا أي سكريبت، وده بيحمي محتواك ويخلّيه بتاعك.</p></details>
+          <details class="rv"><summary>Is it really free? What’s the catch?</summary><p class="ans">Really free. I’m building a portfolio and an audience, and every project is proof I can show. All I ask is permission to show the work (and if you’d rather not, just say so).</p></details>
+          <details class="rv" style="--i:1"><summary>How fast will I get it?</summary><p class="ans">A reel, script or voice-over is usually delivered within 48 hours of agreeing on the plan, and your first message gets a reply within 24 hours.</p></details>
+          <details class="rv" style="--i:2"><summary>What’s the difference between motion graphics and AI video?</summary><p class="ans">Motion graphics are designed titles, shapes and icons in motion; AI generates realistic or cartoon scenes and shots. The best work combines both, and that’s my specialty.</p></details>
+          <details class="rv" style="--i:3"><summary>Who owns the work?</summary><p class="ans">You do. The final files are yours to use as you like, and I only use licensed or royalty-free voices and music.</p></details>
+          <details class="rv" style="--i:4"><summary>Can the voice-over be in my own voice?</summary><p class="ans">Yes. Record one clean minute and I create a clone of your voice that can read any script, which keeps your content truly yours.</p></details>
         </div>
       </div>
     </section>
@@ -534,21 +585,21 @@
       <div class="wrap">
         <div class="contact rv">
           <div>
-            <span class="kicker">تواصل</span>
-            <h2 id="ct-t" class="display h2" style="margin:1rem 0">فكرتك تستاهل<br><span class="gold">تتشاف.</span></h2>
-            <p class="lede">املا الفورم وابعته على واتساب أو بالإيميل، والرسالة هتتكتب لوحدها.</p>
-            <p class="wa-line"><svg width="22" height="22" aria-hidden="true" style="color:#25d366"><use href="#i-wa"/></svg>واتساب: <a href="https://wa.me/201558664894">+20 155 866 4894</a></p>
-            <p class="wa-line"><svg width="22" height="22" aria-hidden="true" style="color:var(--gold-2)"><use href="#i-mail"/></svg>إيميل: <a href="mailto:mohamed.khdre.ibrahim@gmail.com">mohamed.khdre.ibrahim@gmail.com</a></p>
+            <span class="kicker">Contact</span>
+            <h2 id="ct-t" class="display h2" style="margin:1rem 0">Your idea deserves<br><span class="gold">to be seen.</span></h2>
+            <p class="lede">Fill in the form and send it by WhatsApp or email; the message writes itself.</p>
+            <p class="wa-line"><svg width="22" height="22" aria-hidden="true" style="color:#25d366"><use href="#i-wa"/></svg>WhatsApp: <a href="https://wa.me/201558664894">+20 155 866 4894</a></p>
+            <p class="wa-line"><svg width="22" height="22" aria-hidden="true" style="color:var(--gold-2)"><use href="#i-mail"/></svg>Email: <a href="mailto:mohamed.khdre.ibrahim@gmail.com">mohamed.khdre.ibrahim@gmail.com</a></p>
           </div>
           <form id="lead" novalidate>
-            <div class="field"><label for="f-name">اسمك</label><input id="f-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="f-biz">مشروعك أو قناتك</label><input id="f-biz" name="biz" autocomplete="organization"></div>
-            <div class="field"><label for="f-svc">محتاج إيه؟</label>
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-biz">Your project or channel</label><input id="f-biz" name="biz" autocomplete="organization"></div>
+            <div class="field"><label for="f-svc">What do you need?</label>
               <select id="f-svc" name="svc">
-                <option>ريل موشن جرافيك</option><option>فويس أوفر بالعربي</option><option>سكريبت بيبيع</option><option>تحليل منافسين</option><option>استشارة أدوات AI</option>
+                <option>Motion graphics reel</option><option>Arabic voice-over</option><option>A script that sells</option><option>Competitor analysis</option><option>AI tools consultation</option>
               </select></div>
-            <div class="field"><label for="f-msg">احكيلنا في سطرين</label><textarea id="f-msg" name="msg"></textarea></div>
-            <div class="form-actions"><button class="btn btn-gold" type="submit" value="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابعت على واتساب</button><button class="btn btn-line light" type="submit" value="mail"><svg aria-hidden="true"><use href="#i-mail"/></svg>ابعت بالإيميل</button></div>
+            <div class="field"><label for="f-msg">Tell me in two lines</label><textarea id="f-msg" name="msg"></textarea></div>
+            <div class="form-actions"><button class="btn btn-gold" type="submit" value="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp</button><button class="btn btn-line light" type="submit" value="mail"><svg aria-hidden="true"><use href="#i-mail"/></svg>Send by email</button></div>
             <p id="form-msg" role="status" style="font-size:14px;color:#e6cf98;min-height:1.4em;margin:0"></p>
           </form>
         </div>
@@ -558,21 +609,21 @@
 
   <footer>
     <div class="wrap">
-      <span>© 2026 Khidr AI · محمد خضر · <a href="privacy.html">الخصوصية</a> · <a href="terms.html">الشروط</a></span>
+      <span>© 2026 Khidr AI · Mohamed Khidr · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
       <div class="socials">
-        <a href="https://www.youtube.com/@mohamedibrahimkhdre" aria-label="يوتيوب"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
-        <a href="https://www.instagram.com/mohamed__khidr/" aria-label="إنستجرام"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
-        <a href="https://www.tiktok.com/@khidr_ai" aria-label="تيك توك"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
-        <a href="https://www.facebook.com/khidrai.eg" aria-label="فيسبوك"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
-        <a href="mailto:mohamed.khdre.ibrahim@gmail.com" aria-label="إيميل"><svg aria-hidden="true"><use href="#i-mail"/></svg></a>
+        <a href="https://www.youtube.com/@mohamedibrahimkhdre" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+        <a href="https://www.instagram.com/mohamed__khidr/" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+        <a href="https://www.tiktok.com/@khidr_ai" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
+        <a href="https://www.facebook.com/khidrai.eg" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        <a href="mailto:mohamed.khdre.ibrahim@gmail.com" aria-label="Email"><svg aria-hidden="true"><use href="#i-mail"/></svg></a>
       </div>
     </div>
   </footer>
 
-  <a class="wa-fab" href="https://wa.me/201558664894?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Khidr%20AI%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%81%D9%83%D8%B1%D8%A9" aria-label="كلّمنا على واتساب"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+  <a class="wa-fab" href="https://wa.me/201558664894?text=Hi%20Khidr%20AI%2C%20I%20have%20an%20idea" aria-label="Message me on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 
   <script>
-    // TODO(محمد): غيّر الأرقام في data-count فوق للأرقام الحقيقية، واملا آراء العملاء وأسماء الجهات قبل النشر.
+    // TODO: real numbers in data-count, real testimonials.
     const root = document.documentElement;
     const themeBtn = document.getElementById('theme');
     const setIcon = () => themeBtn.querySelector('use').setAttribute('href', root.dataset.theme === 'dark' ? '#i-sun' : '#i-moon');
@@ -609,27 +660,37 @@
 
     // ===== portfolio: local files in media/work + YouTube playlist "Portfolio" =====
     const LOCAL = [
-      ['showreel','motion','شوريل 2026 — لقطات من شغلي'],
-      ['hook-sanad-drop','hooks','هوك: شخصية سند تنزل من السقف'],
-      ['sanad-3steps','social','ثلاث خطوات مين باع — منصة سند'],
-      ['hook-field','hooks','هوك: نزول من السما بالذكاء الاصطناعي'],
-      ['sanad-white-friday','social','الجمعة البيضاء — منصة سند'],
-      ['pepsi','social','منصة سند — كيف تكسب بذكاء'],
-      ['abnaouna','charity','ابناؤنا — حضن أيتام'],
-      ['microsoft','social','منصة سند — شخصية سند'],
-      ['mashareq-hajj','charity','مشارق — أصعب سنين الحج'],
-      ['sanad-lies','social','يكذبون عليك — منصة سند'],
-      ['brand-watch','ads','إعلان براند ساعات'],
-      ['mastoura','charity','مستورة — سقيا الحجاج'],
-      ['vr-motion','motion','نظارة VR بعيون المصمم'],
-      ['qatami','charity','جمعية حائل — الشيخ ناصر القطامي'],
-      ['sanad-35','social','35 مؤثر — منصة سند'],
-      ['mashareq-voice','voice','مشارق — تعليق صوتي'],
-      ['ghumaiqa','charity','رعاية الأيتام بغميقة'],
-      ['hail','charity','تحفيظ حائل'],
-      ['yt-01','motion','ريل اتعمل كله بالذكاء الاصطناعي','media/yt-01/yt-01.mp4','media/yt-01/poster.jpg'],
+      ['showreel','motion','Showreel 2026 — highlights'],
+      ['witty','ads','Witty — Ad'],
+      ['ox-ai','ai','AI video — OX'],
+      ['sanad-screen','social','The screen that shows who sold — Sanad Platform'],
+      ['deema-ai','ai','Deema — AI character'],
+      ['astakrill','ads','Khobraa Pharmacy — Astakrill'],
+      ['mosaly-ai1','ai','Al Mosaly app — AI 1'],
+      ['royal-honey','ads','Khobraa Pharmacy — Royal Honey'],
+      ['stp-sufra','motion','Sufra — Recipe video'],
+      ['seahouse','ads','Sea House'],
+      ['mosaly-ai2','ai','Al Mosaly app — AI 2'],
+      ['hook-sanad-drop','hooks','Hook: Sanad character drops in'],
+      ['sanad-3steps','social','Three Steps — Sanad Platform'],
+      ['hook-field','hooks','Hook: AI sky drop'],
+      ['sanad-white-friday','social','White Friday — Sanad Platform'],
+      ['pepsi','social','Sanad Platform — Earn smarter'],
+      ['abnaouna','charity','Abnaouna — Embracing orphans'],
+      ['microsoft','social','Sanad Platform — The Sanad character'],
+      ['mashareq-hajj','charity','Mashareq — The hardest Hajj years'],
+      ['sanad-lies','social','They’re Lying to You — Sanad Platform'],
+      ['brand-watch','ads','Watch brand ad'],
+      ['mastoura','charity','Mastoura — Water for pilgrims'],
+      ['vr-motion','motion','VR through a designer’s eyes'],
+      ['qatami','charity','Hail Charity — Sheikh Nasser Al-Qatami'],
+      ['sanad-35','social','35 Influencers — Sanad Platform'],
+      ['mashareq-voice','voice','Mashareq — Voice-over'],
+      ['ghumaiqa','charity','Ghumaiqa Orphan Care'],
+      ['hail','charity','Hail Quran School'],
+      ['yt-01','motion','A reel made entirely with AI','media/yt-01/yt-01.mp4','media/yt-01/poster.jpg'],
     ];
-    const YT = [["FA2OTE4j2kc", "Fanz", 60], ["zEajkyEsP6E", "مهرجان الشيخ زايد", 58], ["H-c9EJ1zqzw", "منتدى الابتكار القيادي", 67], ["sjzf-C7q43Y", "بناء العريش", 146], ["-JZdejhYfYo", "الإمارات", 134], ["8wf3LYC-Pro", "الطائرات والتغيرات المناخية", 126], ["ka6kppyrpg0", "NEO", 48], ["rBd-zBpXR8w", "المريحانة", 104], ["a-UUB3VM9QM", "Chocolate", 322], ["q8XvHutUTeI", "من هو محمد بن زايد رئيس الإمارات الجديد؟", 161], ["gvlRMBKgszQ", "مستحيل ما ودك؟", 25], ["FZXRECUIq6U", "قطر للقوارب", 72], ["X-bw82aRv2I", "Coco Chanel", 276], ["XOgFw7A9b4k", "تبرع", 21], ["v9oL6JrLzEw", "Ursla", 21], ["wbq7n9LqiWE", "GOUI", 61], ["LoChLU26UoU", "كافل اليتيم", 21], ["eLrtkYj_80U", "تلاوة", 46], ["nGFL3SbjAUM", "Dr. Sultan", 182], ["vCnmRisZo3M", "نشرة أخبار", 88], ["EwVhu-eoah4", "Mlay 2", 22], ["8y3d2Q-BwEg", "أنيميشن قصير", 9], ["9ETIi0EbKok", "Mlay", 26], ["TLp5kQ6K30o", "فيديو مكة", 20], ["rmpJdFkcuuQ", "Thomas Edison", 209], ["hTtvOQ3e_xI", "درجة الحرارة المثالية", 52], ["0tSgO-IxCgQ", "الإمارات قبلة المفكرين والمبدعين عالميا", 17], ["4Yn8Q3U2LfY", "تجربة صوتية", 29], ["Jmlbz44pMTg", "نصر", 51], ["kWsK3kdO9gQ", "زلزال تركيا 🇹🇷", 66], ["CTxbruFFnNc", "دبي وجهةالرياضات   حتى الإلكترونية", 91], ["O2Y9ol8m9kU", "اهمية ارتداء الكمامات", 30], ["KXzBSiURAXM", "الشيخ ماهر المعيقلي", 52], ["OidiT-wVO54", "الامارات خط دفاع", 91], ["yL_lWzDUgsY", "د. ريم", 54], ["PBDKZAgUq1U", "الشيخ ياسر الدوسري", 59], ["sMSZbVUDwhY", "مستشفى الخالدي", 65], ["kkGCiTG6ltc", "الشيخ محمود خليل الحصري", 23], ["s8_Yv8R339A", "الشيخ سعود شريم", 38], ["V2mPQlxPiSY", "الشيخ محمد رفعت", 61]];
+    const YT = [["FA2OTE4j2kc", "Fanz", 60], ["zEajkyEsP6E", "Sheikh Zayed Festival", 58], ["H-c9EJ1zqzw", "Leadership Innovation Forum", 67], ["sjzf-C7q43Y", "Al Arish Building", 146], ["-JZdejhYfYo", "The UAE", 134], ["8wf3LYC-Pro", "Aviation & Climate Change", 126], ["ka6kppyrpg0", "NEO", 48], ["rBd-zBpXR8w", "Al Muraihana", 104], ["a-UUB3VM9QM", "Chocolate", 322], ["q8XvHutUTeI", "Who is Mohamed bin Zayed, the new UAE President?", 161], ["gvlRMBKgszQ", "No way you don’t want it?", 25], ["FZXRECUIq6U", "Qatar Boats", 72], ["X-bw82aRv2I", "Coco Chanel", 276], ["XOgFw7A9b4k", "Donate", 21], ["v9oL6JrLzEw", "Ursla", 21], ["wbq7n9LqiWE", "GOUI", 61], ["LoChLU26UoU", "Orphan Sponsor", 21], ["eLrtkYj_80U", "Recitation", 46], ["nGFL3SbjAUM", "Dr. Sultan", 182], ["vCnmRisZo3M", "News bulletin", 88], ["EwVhu-eoah4", "Mlay 2", 22], ["8y3d2Q-BwEg", "Short animation", 9], ["9ETIi0EbKok", "Mlay", 26], ["TLp5kQ6K30o", "Makkah video", 20], ["rmpJdFkcuuQ", "Thomas Edison", 209], ["hTtvOQ3e_xI", "The ideal temperature", 52], ["0tSgO-IxCgQ", "UAE, a global hub for thinkers and creators", 17], ["4Yn8Q3U2LfY", "Audio piece", 29], ["Jmlbz44pMTg", "Nasr", 51], ["kWsK3kdO9gQ", "Turkey earthquake 🇹🇷", 66], ["CTxbruFFnNc", "Dubai, a destination for sports, even esports", 91], ["O2Y9ol8m9kU", "Why masks matter", 30], ["KXzBSiURAXM", "Sheikh Maher Al-Muaiqly", 52], ["OidiT-wVO54", "UAE, a line of defense", 91], ["yL_lWzDUgsY", "Dr. Reem", 54], ["PBDKZAgUq1U", "Sheikh Yasser Al-Dosari", 59], ["sMSZbVUDwhY", "Al Khalidi Hospital", 65], ["kkGCiTG6ltc", "Sheikh Mahmoud Khalil Al-Hussary", 23], ["s8_Yv8R339A", "Sheikh Saud Al-Shuraim", 38], ["V2mPQlxPiSY", "Sheikh Mohamed Refaat", 61]];
     const items = [
       ...LOCAL.map(([id,cat,title,src,poster]) => ({kind:'local',id,cat,title,src:src||`media/work/${id}.mp4`,poster:poster||`media/work/${id}.jpg`})),
       ...YT.map(([id,title]) => ({kind:'yt',id,cat:'youtube',title,poster:`https://i.ytimg.com/vi/${id}/hqdefault.jpg`})),
@@ -637,7 +698,7 @@
     const grid = document.getElementById('work-grid'), empty = document.getElementById('work-empty'), moreBtn = document.getElementById('more');
     const PAGE = matchMedia('(min-width: 1001px)').matches ? 9 : matchMedia('(min-width: 721px)').matches ? 8 : 6; let shown = PAGE, filter = 'all', query = '';
     const esc = (t) => t.replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-    const catName = {hooks:'هوك',ads:'إعلان',charity:'جمعية خيرية',social:'سوشيال',motion:'موشن',voice:'فويس',youtube:'يوتيوب'};
+    const catName = {ai:'AI',hooks:'Hook',ads:'Ad',charity:'Charity',social:'Social',motion:'Motion',voice:'Voice',youtube:'YouTube'};
     const touch = matchMedia('(hover: none)').matches;
     const vio = new IntersectionObserver((es) => es.forEach((e) => { const v = e.target;
       e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
@@ -645,7 +706,7 @@
       const q = query.trim().toLowerCase();
       const list = items.filter((it) => (filter === 'all' || it.cat === filter) && (!q || (it.title + ' ' + catName[it.cat]).toLowerCase().includes(q)));
       grid.innerHTML = list.slice(0, shown).map((it) => `
-        <button class="card${it.kind === 'yt' ? ' landscape' : ''}" type="button" data-i="${items.indexOf(it)}" aria-label="شغّل: ${esc(it.title)}">
+        <button class="card${it.kind === 'yt' ? ' landscape' : ''}" type="button" data-i="${items.indexOf(it)}" aria-label="Play: ${esc(it.title)}">
           <div class="media">
             ${it.kind === 'local'
               ? `<video src="${it.src}" poster="${it.poster}" muted loop playsinline preload="none"></video>`
@@ -688,13 +749,13 @@
     document.getElementById('lead').addEventListener('submit', (e) => {
       e.preventDefault();
       const f = e.target, msg = document.getElementById('form-msg');
-      if (!f.name.value.trim()) { msg.textContent = 'اكتب اسمك عشان نعرف نرد عليك.'; f.name.focus(); return; }
-      const text = `أهلاً Khidr AI 👋\nأنا ${f.name.value.trim()}${f.biz.value.trim() ? ' من ' + f.biz.value.trim() : ''}.\nمحتاج: ${f.svc.value}.\n${f.msg.value.trim()}`;
+      if (!f.name.value.trim()) { msg.textContent = 'Add your name so I know who to reply to.'; f.name.focus(); return; }
+      const text = `Hi Khidr AI 👋\nI'm ${f.name.value.trim()}${f.biz.value.trim() ? ' from ' + f.biz.value.trim() : ''}.\nI need: ${f.svc.value}.\n${f.msg.value.trim()}`;
       if (e.submitter && e.submitter.value === 'mail') {
-        msg.textContent = 'بنفتح الإيميل…';
-        location.href = 'mailto:mohamed.khdre.ibrahim@gmail.com?subject=' + encodeURIComponent('طلب خدمة من موقع Khidr AI: ' + f.svc.value) + '&body=' + encodeURIComponent(text);
+        msg.textContent = 'Opening email…';
+        location.href = 'mailto:mohamed.khdre.ibrahim@gmail.com?subject=' + encodeURIComponent('Service request from Khidr AI site: ' + f.svc.value) + '&body=' + encodeURIComponent(text);
       } else {
-        msg.textContent = 'بنفتح واتساب…';
+        msg.textContent = 'Opening WhatsApp…';
         window.open('https://wa.me/201558664894?text=' + encodeURIComponent(text), '_blank', 'noopener');
       }
     });
