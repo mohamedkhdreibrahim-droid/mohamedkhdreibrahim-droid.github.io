@@ -335,7 +335,7 @@
 /* MOVA visual identity */
 .brand-mark{background:linear-gradient(135deg,#c39bff,#8e4de8)!important;color:#fff!important}.nav{background:color-mix(in srgb,var(--bg) 94%,transparent)}.hero .orb{background:radial-gradient(circle,#8e4de844,transparent 70%)!important}.gold{color:var(--gold)}.btn-gold{background:linear-gradient(135deg,#ffdf77,#ffb23d)!important;color:#241328!important}.portrait{box-shadow:none!important}.skills{align-items:center}
 </style>
-<link rel="stylesheet" href="/assets/site.css?v=20261111"><script src="/assets/site.js?v=20261111" defer></script><link rel="stylesheet" href="/assets/business.css?v=20261111-v3"><script src="/assets/business.js?v=20261111-v3" defer></script></head>
+<link rel="stylesheet" href="/assets/site.css?v=20261111"><script src="/assets/site.js?v=20261111" defer></script><link rel="stylesheet" href="/assets/business.css?v=20261111-v4"><script src="/assets/pricing.js?v=20261111-v4" defer></script><script src="/assets/business.js?v=20261111-v4" defer></script></head>
 <body class="portfolio-page">
   <a class="skip" href="#main">روح للمحتوى</a>
 
@@ -571,7 +571,7 @@
             <div class="field"><label for="f-biz">الشركة أو العلامة التجارية</label><input id="f-biz" name="biz" autocomplete="organization"></div>
             <div class="field"><label for="f-svc">محتاج إيه؟</label>
               <select id="f-svc" name="svc"><option value="monthly">محتوى مرئي شهري</option><option value="campaign">مشروع إنتاج متكامل</option><option value="retainer-6">شراكة — 6 أشهر</option><option value="retainer-12">شراكة — 12 شهرًا</option></select></div>
-            <div class="field"><label for="f-package">الباقة المطلوبة (اختياري)</label><select id="f-package" name="package"><option value="">ساعدني في الاختيار</option><option value="presence" data-package-family="monthly">الحضور الأساسي</option><option value="growth" data-package-family="monthly">نمو المحتوى</option><option value="scale" data-package-family="monthly">الإنتاج الموسّع</option><option value="campaign" data-package-family="project">الحملة المتكاملة</option><option value="launch" data-package-family="project">إطلاق منتج أو مشروع</option><option value="motion-identity" data-package-family="project">الهوية المتحركة</option></select></div><div class="field"><label for="f-market">السوق المستهدف</label><select id="f-market" name="market" required><option value="">اختر السوق</option><option value="sa">السعودية</option><option value="gulf">أسواق الخليج</option><option value="eg">مصر</option><option value="multi">أكثر من سوق</option></select></div><div class="field"><label for="f-budget">الميزانية التقريبية والعملة (اختياري)</label><input id="f-budget" name="budget" maxlength="80"></div><div class="field"><label for="f-msg">احكيلنا في سطرين</label><textarea id="f-msg" name="msg"></textarea></div>
+            <div class="field"><label for="f-package">الباقة المطلوبة (اختياري)</label><select id="f-package" name="package"><option value="">ساعدني في الاختيار</option><option value="presence" data-package-family="monthly">باقة الانطلاقة</option><option value="growth" data-package-family="monthly">باقة النمو</option><option value="scale" data-package-family="monthly">باقة الريادة</option><option value="campaign" data-package-family="project">باقة الحملة الإعلانية</option><option value="launch" data-package-family="project">باقة إطلاق منتج أو مشروع</option><option value="motion-identity" data-package-family="project">باقة الهوية المتحركة</option></select></div><p class="biz-quote-summary" data-price-summary hidden aria-live="polite"></p><div class="field"><label for="f-market">السوق المستهدف</label><select id="f-market" name="market" required><option value="">اختر السوق</option><option value="sa">السعودية</option><option value="ae">الإمارات</option><option value="gulf">أسواق الخليج</option><option value="eg">مصر</option><option value="multi">أكثر من سوق</option></select></div><div class="field"><label for="f-budget">الميزانية التقريبية والعملة (اختياري)</label><input id="f-budget" name="budget" maxlength="80"></div><div class="field"><label for="f-msg">احكيلنا في سطرين</label><textarea id="f-msg" name="msg"></textarea></div>
             <div class="form-actions"><button class="btn btn-gold" type="submit" value="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابعت على واتساب</button><button class="btn btn-line light" type="submit" value="mail"><svg aria-hidden="true"><use href="#i-mail"/></svg>ابعت بالإيميل</button></div>
             <p id="form-msg" role="status" style="font-size:14px;color:#e6cf98;min-height:1.4em;margin:0"></p>
           </form>
@@ -722,6 +722,7 @@
       if (fields.namedItem('package').value) lines.push('الباقة: ' + fields.namedItem('package').selectedOptions[0].textContent);
       if (fields.budget.value.trim()) lines.push('الميزانية التقريبية: ' + fields.budget.value.trim());
       if (fields.msg.value.trim()) lines.push(fields.msg.value.trim());
+      lines.push(...(window.MovaPricing?.quoteLines(f) || []));
       const message = lines.join('\n');
       if (e.submitter && e.submitter.value === 'mail') {
         msg.textContent = 'جارٍ فتح البريد…';

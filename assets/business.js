@@ -21,6 +21,7 @@
         option.disabled = disabled; option.hidden = disabled;
       });
       if (selected && family && packageFamilies[selected] !== family) selector.value = '';
+      window.MovaPricing?.refresh();
     };
     plan.addEventListener('change', refresh);
     selector.addEventListener('change', () => {
@@ -46,6 +47,7 @@
     });
     if (form && form.elements.engagement.value.startsWith('retainer-')) form.elements.engagement.value = `retainer-${term}`;
     packageChoice?.refresh();
+    window.MovaPricing?.refresh();
   };
   terms.forEach(button => button.addEventListener('click', () => setTerm(button.dataset.retainerTerm)));
   setTerm(term);
@@ -59,6 +61,7 @@
     packageChoice?.refresh();
     if (packageChoice && packageFamilies[link.dataset.leadPackage]) packageChoice.selector.value = link.dataset.leadPackage;
     if (allowedIndustries.includes(link.dataset.leadIndustry)) form.elements.industry.value = link.dataset.leadIndustry;
+    window.MovaPricing?.refresh();
     form.elements.company.focus({ preventScroll: true });
   }));
   form.elements.engagement.addEventListener('change', () => {
@@ -94,6 +97,7 @@
       `${text('Engagement', 'نوع التعاون')}: ${label('engagement')}`
     ];
     if (form.elements.namedItem('package')?.value) lines.push(`${text('Package', 'الباقة')}: ${label('package')}`);
+    lines.push(...(window.MovaPricing?.quoteLines(form) || []));
     if (label('budget')) lines.push(`${text('Indicative budget', 'الميزانية التقريبية')}: ${label('budget')}`);
     if (label('brief')) lines.push(`${text('Goals / launch dates', 'الأهداف / موعد الإطلاق')}: ${label('brief')}`);
     window.open(`https://wa.me/201558664894?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');

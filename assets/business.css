@@ -8,6 +8,17 @@ body.company-page .hero .reveal{opacity:1;transform:none}
 .biz-package h3,.biz-sector h3{margin:0;font-size:25px;line-height:1.4;letter-spacing:-.4px}
 .biz-package p,.biz-sector p{margin:0;color:var(--muted);font-size:15px;line-height:1.85}
 .biz-scope{color:var(--ink)!important;font-size:20px!important;font-weight:800;line-height:1.5!important}
+.biz-price-toolbar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin-bottom:24px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:var(--surface,var(--card-solid))}
+.biz-price-toolbar label{font-weight:700;font-size:14px}
+.biz-price-toolbar select{font:inherit;font-size:14px;min-height:46px;max-width:100%;min-width:0;border:1px solid var(--line);border-radius:100px;padding:10px 16px;background:var(--surface2,var(--bg-2));color:var(--ink)}
+.biz-price-block{display:grid;gap:7px;width:100%}
+.biz-price-value{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;color:var(--ink)!important}
+.biz-price-value bdi{font-size:clamp(25px,2.4vw,34px);font-weight:800;line-height:1.3}
+.biz-price-unit{font-size:13px;color:var(--muted)}
+.biz-base-price{font-size:12px;color:var(--muted);line-height:1.7}
+.biz-discount{display:inline-flex;width:fit-content;max-width:100%;padding:5px 11px;border-radius:100px;background:#ffdf77;color:#241328;font-size:12px;font-weight:800;line-height:1.7}
+.biz-quote-summary{grid-column:1/-1;white-space:pre-line;overflow-wrap:anywhere;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--surface2,var(--card-solid));font-size:13px!important;line-height:1.9!important;margin:0!important;color:var(--ink)!important}
+@media(max-width:600px){.biz-price-toolbar{align-items:stretch;flex-direction:column}.biz-price-toolbar select{width:100%}}
 .biz-package ul{padding-inline-start:20px;margin:0 0 8px;display:grid;gap:10px;font-size:14px;line-height:1.8;color:var(--muted);flex:1}
 .biz-package li::marker{color:var(--purple,#c39bff)}
 .biz-package .btn,.biz-sector .btn{margin-top:auto;max-width:100%;font-size:14px;min-height:48px;text-align:center;white-space:normal}
@@ -52,3 +63,4 @@ body.company-page .hero .reveal{opacity:1;transform:none}
 @media(max-width:850px){.biz-grid{grid-template-columns:minmax(0,1fr)}.biz-retainer,.biz-contact{grid-template-columns:minmax(0,1fr)}.biz-package,.biz-sector{gap:14px}.biz-package .btn{width:100%}}
 @media(max-width:600px){.biz-contact,.biz-retainer{padding:24px 20px;border-radius:22px;gap:24px}.biz-fields{grid-template-columns:minmax(0,1fr)}.biz-field.full{grid-column:auto}.biz-terms .biz-term{flex:1;padding-inline:10px}.biz-package h3,.biz-sector h3{font-size:23px}.biz-direct{flex-direction:column;gap:2px}}
 @media(prefers-reduced-motion:reduce){.biz-term,.biz-package{transition:none!important}}
+[data-price-discount][hidden],[data-price-original][hidden],[data-price-unit][hidden],[data-price-summary][hidden]{display:none!important}
