@@ -335,7 +335,7 @@
 /* MOVA visual identity */
 .brand-mark{background:linear-gradient(135deg,#c39bff,#8e4de8)!important;color:#fff!important}.nav{background:color-mix(in srgb,var(--bg) 94%,transparent)}.hero .orb{background:radial-gradient(circle,#8e4de844,transparent 70%)!important}.gold{color:var(--gold)}.btn-gold{background:linear-gradient(135deg,#ffdf77,#ffb23d)!important;color:#241328!important}.portrait{box-shadow:none!important}.skills{align-items:center}
 </style>
-<link rel="stylesheet" href="/assets/site.css?v=20261111"><script src="/assets/site.js?v=20261111" defer></script><link rel="stylesheet" href="/assets/business.css?v=20261111-v5"><script src="/assets/pricing.js?v=20261111-v5" defer></script><script src="/assets/business.js?v=20261111-v5" defer></script></head>
+<link rel="stylesheet" href="/assets/site.css?v=20261111"><script src="/assets/site.js?v=20261111" defer></script><link rel="stylesheet" href="/assets/business.css?v=20261111-v6"><script src="/assets/pricing.js?v=20261111-v6" defer></script><script src="/assets/business.js?v=20261111-v6" defer></script><script src="/assets/transfer.js?v=20261111-v6" defer></script></head>
 <body class="portfolio-page">
   <a class="skip" href="#main">روح للمحتوى</a>
 
@@ -572,13 +572,37 @@
             <div class="field"><label for="f-svc">محتاج إيه؟</label>
               <select id="f-svc" name="svc"><option value="monthly">محتوى مرئي شهري</option><option value="campaign">مشروع إنتاج متكامل</option><option value="retainer-6">شراكة — 6 أشهر</option><option value="retainer-12">شراكة — 12 شهرًا</option></select></div>
             <div class="field"><label for="f-package">الباقة المطلوبة (اختياري)</label><select id="f-package" name="package"><option value="">ساعدني في الاختيار</option><option value="presence" data-package-family="monthly">باقة الانطلاقة</option><option value="growth" data-package-family="monthly">باقة النمو</option><option value="scale" data-package-family="monthly">باقة الريادة</option><option value="campaign" data-package-family="project">باقة الحملة الإعلانية</option><option value="launch" data-package-family="project">باقة إطلاق منتج أو مشروع</option><option value="motion-identity" data-package-family="project">باقة الهوية المتحركة</option></select></div><p class="biz-quote-summary" data-price-summary hidden aria-live="polite"></p><div class="field"><label for="f-market">السوق المستهدف</label><select id="f-market" name="market" required><option value="">اختر السوق</option><option value="sa">السعودية</option><option value="ae">الإمارات</option><option value="gulf">أسواق الخليج</option><option value="eg">مصر</option><option value="multi">أكثر من سوق</option></select></div><div class="field"><label for="f-budget">الميزانية التقريبية والعملة (اختياري)</label><input id="f-budget" name="budget" maxlength="80"></div><div class="field"><label for="f-msg">احكيلنا في سطرين</label><textarea id="f-msg" name="msg"></textarea></div>
-            <div class="form-actions"><button class="btn btn-gold" type="submit" value="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابعت على واتساب</button><button class="btn btn-line light" type="submit" value="mail"><svg aria-hidden="true"><use href="#i-mail"/></svg>ابعت بالإيميل</button></div>
+            <a class="btn" href="#transfer">التحويل وإرسال الإيصال</a><div class="form-actions"><button class="btn btn-gold" type="submit" value="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابعت على واتساب</button><button class="btn btn-line light" type="submit" value="mail"><svg aria-hidden="true"><use href="#i-mail"/></svg>ابعت بالإيميل</button></div>
             <p id="form-msg" role="status" style="font-size:14px;color:#e6cf98;min-height:1.4em;margin:0"></p>
           </form>
         </div>
       </div>
     </section>
-  </main>
+  <section id="transfer" aria-labelledby="transferTitle"><div class="wrap"><div class="biz-transfer">
+ <div class="eyebrow">مراجعة التحويل</div><h2 id="transferTitle">باقتك وإيصال تحويلك. </h2>
+ <p>اعتمد نطاق العمل والمبلغ مع MOVA Creative قبل التحويل. إرسال الإيصال يطلب مراجعة يدوية، ولا يؤكد استلام المبلغ.</p>
+ <p data-transfer-empty>اختَر باقة من نموذج الطلب بالأعلى للمتابعة.</p>
+ <div data-transfer-selected hidden><p class="biz-quote-summary" data-transfer-summary></p>
+ <p data-transfer-foreign hidden>رابط إنستاباي للتحويل بالجنيه المصري. تواصل معنا للاتفاق على التحويل بعملة أخرى، أو اعرض أسعار الباقات بالجنيه قبل المتابعة.
+ <button class="biz-term" type="button" data-transfer-egp>عرض الأسعار بالجنيه</button></p>
+ <div data-transfer-egp-panel hidden><p>افتح إنستاباي، وراجع اسم المستفيد داخل التطبيق، ثم حوّل المبلغ المتفق عليه. الرابط لا يحدد المبلغ تلقائيًا.</p>
+ <a class="btn" href="https://ipn.eg/S/mohamed.khdre.ibrahim/instapay/5ZZ1Df" target="_blank" rel="noopener noreferrer" data-instapay>افتح إنستاباي للتحويل</a>
+ <form id="transferReceipt" class="biz-form" method="post" action="https://formsubmit.co/mova.creative.eg@gmail.com" enctype="multipart/form-data" target="_blank" rel="noopener noreferrer">
+ <input type="hidden" name="_subject" value="MOVA Creative — Transfer receipt pending review"><input type="hidden" name="_template" value="table">
+ <input type="text" name="_honey" class="biz-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+ <input type="hidden" name="package"><input type="hidden" name="package_id"><input type="hidden" name="engagement"><input type="hidden" name="quoted_scope"><input type="hidden" name="currency" value="EGP"><input type="hidden" name="payment_status" value="PENDING MANUAL REVIEW — receipt submitted, funds not verified">
+ <div class="biz-fields">
+ <div class="biz-field"><label for="receiptName">اسم المُحوّل أو الشركة</label><input id="receiptName" name="name" maxlength="120" autocomplete="name" required></div>
+ <div class="biz-field"><label for="receiptEmail">بريدك الإلكتروني</label><input id="receiptEmail" name="email" type="email" maxlength="254" autocomplete="email" required></div>
+ <div class="biz-field"><label for="receiptReference">رقم عملية التحويل</label><input id="receiptReference" name="transfer_reference" maxlength="100" required></div>
+ <div class="biz-field"><label for="receiptAmount">المبلغ المحوّل فعليًا بالجنيه المصري</label><input id="receiptAmount" name="transferred_amount_egp" type="number" inputmode="decimal" min="0.01" max="999999999" step="0.01" required></div>
+ <div class="biz-field full"><label for="receiptFile">إيصال التحويل — JPG أو PNG أو PDF، بحد أقصى 5 ميجابايت</label><input id="receiptFile" name="attachment" type="file" accept="image/jpeg,image/png,application/pdf" required aria-describedby="receiptFileHint"><p id="receiptFileHint" class="biz-form-hint">أظهر المستفيد والتاريخ والمبلغ ورقم العملية. أخفِ الأرصدة وبيانات الحساب غير المرتبطة بالتحويل.</p></div>
+ </div>
+ <label class="biz-transfer-consent"><input type="checkbox" name="review_acknowledged" value="yes" required><span>أفهم أن الإيصال سيُراجع قبل تأكيد الدفع، وأوافق على إرسال هذه البيانات إلى MOVA Creative. <a href="/transfer-privacy.html" target="_blank" rel="noopener noreferrer">خصوصية الإيصالات</a></span></label>
+ <p data-transfer-error role="alert" hidden></p><button class="btn" type="submit">إرسال الإيصال للمراجعة</button>
+ <p class="biz-form-hint">إرسال الإيصال عبر FormSubmit يفتح صفحة التأكيد في تبويب جديد؛ أكمل التحقق إن ظهر. الدفع يظل بانتظار مراجعة MOVA للتحويل. لو تعذر الإرسال، ابعت الإيصال إلى mova.creative.eg@gmail.com.</p>
+ </form></div></div></div></div></section>
+</main>
 
   <footer>
     <div class="wrap">

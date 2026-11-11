@@ -83,3 +83,15 @@ body.company-page .hero .reveal{opacity:1;transform:none}
  body.portfolio-page .hero{padding-top:156px}
 }
 @media(max-width:600px){body.portfolio-page .nav>.wrap>nav{display:contents}}
+.biz-transfer{max-width:900px;margin-inline:auto;padding:32px;border:1px solid var(--line);border-radius:24px;background:var(--surface,var(--card-solid));overflow-wrap:anywhere}
+.biz-transfer h2{font-size:clamp(25px,3vw,36px);line-height:1.5;margin:8px 0 16px}
+.biz-transfer p{font-size:14px;line-height:1.9;color:var(--muted)}
+.biz-transfer .biz-form{margin-top:26px;display:grid;gap:18px}
+.biz-transfer .biz-quote-summary{margin-bottom:20px!important}
+.biz-transfer-consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.9}
+.biz-transfer-consent input{width:20px;height:20px;flex:none;margin-top:4px;accent-color:var(--purple,#a98bff)}
+.biz-transfer-consent a{text-decoration:underline;text-underline-offset:3px}
+.biz-transfer [data-transfer-error]{color:var(--ink);padding:12px;border-inline-start:3px solid var(--amber,#ffb23d);margin:0}
+.biz-transfer input[type=file]{white-space:normal;overflow:hidden}
+.biz-transfer .biz-honeypot{display:none!important}
+@media(max-width:600px){.biz-transfer{padding:24px 20px}.biz-transfer [data-instapay]{display:flex;width:100%;white-space:normal;text-align:center}}

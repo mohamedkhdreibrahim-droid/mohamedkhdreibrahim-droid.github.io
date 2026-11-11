@@ -37,6 +37,12 @@
     const discount = item.discount || 0;
     return { ...item, base, discount, amount: Math.round(base * (100 - discount) / 100), currency: selectedCurrency };
   };
+  const selection = form => {
+    const key = form.elements.namedItem('package')?.value;
+    if (!catalog[key]) return null;
+    const selectedCurrency = forMarket(form.elements.market?.value) || currency;
+    return { key, currency: selectedCurrency, price: rate(key, selectedCurrency) };
+  };
   const quoteLines = form => {
     const key = form.elements.namedItem('package')?.value;
     if (!key || !catalog[key]) return [];
@@ -87,6 +93,7 @@
       summary.hidden = !lines.length;
       summary.textContent = lines.join('\n');
     });
+    document.dispatchEvent(new Event('mova:pricingchange'));
   };
   pickers.forEach(select => select.addEventListener('change', () => {
     currency = Object.hasOwn(currencies, select.value) ? select.value : 'CUSTOM';
@@ -104,6 +111,6 @@
     market?.addEventListener('change', () => { currency = forMarket(market.value) || currency; syncLocation(); refresh(); });
     form.addEventListener('change', refresh);
   });
-  window.MovaPricing = { quoteLines, refresh };
+  window.MovaPricing = { quoteLines, refresh, selection };
   refresh();
 })();
