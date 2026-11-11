@@ -20,8 +20,16 @@
   const format = value => new Intl.NumberFormat(ar ? 'ar-EG-u-nu-latn' : 'en-US', { maximumFractionDigits: 0 }).format(value);
   const money = (value, currency) => `${format(value)} ${currencies[currency][ar ? 'ar' : 'en']}`;
   const forMarket = value => ({ eg: 'EGP', sa: 'SAR', ae: 'AED', gulf: 'CUSTOM', multi: 'CUSTOM' })[value];
+  const validCurrency = value => Object.hasOwn(currencies, value) || value === 'CUSTOM';
   const requested = new URLSearchParams(location.search).get('currency');
-  let currency = Object.hasOwn(currencies, requested) ? requested : 'EGP';
+  let saved;
+  try { saved = localStorage.getItem('mova-currency'); } catch (_) {}
+  let currency = validCurrency(requested) ? requested : validCurrency(saved) ? saved : 'EGP';
+  const syncLocation = () => {
+    const target = new URL(location.href);
+    target.searchParams.set('currency', currency);
+    history.replaceState(history.state, '', target.pathname + target.search + target.hash);
+  };
   const rate = (key, selectedCurrency) => {
     const item = catalog[key];
     if (!item || !Object.hasOwn(currencies, selectedCurrency)) return null;
@@ -46,6 +54,12 @@
     return lines;
   };
   const refresh = () => {
+    try { localStorage.setItem('mova-currency', currency); } catch (_) {}
+    document.querySelectorAll('[data-language-link]').forEach(link => {
+      const target = new URL(link.href, location.href);
+      target.searchParams.set('currency', currency);
+      link.href = target.pathname + target.search + target.hash;
+    });
     pickers.forEach(select => { select.value = currency; select.disabled = false; });
     document.querySelectorAll('[data-package-card]').forEach(card => {
       const value = rate(card.dataset.packageCard, currency);
@@ -76,6 +90,7 @@
   };
   pickers.forEach(select => select.addEventListener('change', () => {
     currency = Object.hasOwn(currencies, select.value) ? select.value : 'CUSTOM';
+    syncLocation();
     forms.forEach(form => {
       const market = form.elements.market;
       if (!market) return;
@@ -86,7 +101,7 @@
   }));
   forms.forEach(form => {
     const market = form.elements.market;
-    market?.addEventListener('change', () => { currency = forMarket(market.value) || currency; refresh(); });
+    market?.addEventListener('change', () => { currency = forMarket(market.value) || currency; syncLocation(); refresh(); });
     form.addEventListener('change', refresh);
   });
   window.MovaPricing = { quoteLines, refresh };

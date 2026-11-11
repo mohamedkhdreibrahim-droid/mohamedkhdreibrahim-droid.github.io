@@ -64,3 +64,22 @@ body.company-page .hero .reveal{opacity:1;transform:none}
 @media(max-width:600px){.biz-contact,.biz-retainer{padding:24px 20px;border-radius:22px;gap:24px}.biz-fields{grid-template-columns:minmax(0,1fr)}.biz-field.full{grid-column:auto}.biz-terms .biz-term{flex:1;padding-inline:10px}.biz-package h3,.biz-sector h3{font-size:23px}.biz-direct{flex-direction:column;gap:2px}}
 @media(prefers-reduced-motion:reduce){.biz-term,.biz-package{transition:none!important}}
 [data-price-discount][hidden],[data-price-original][hidden],[data-price-unit][hidden],[data-price-summary][hidden]{display:none!important}
+/* Keep language and currency together in every site header. */
+.locale-controls{display:flex;align-items:center;gap:6px;flex:none}
+.nav-currency{display:block;min-height:44px;width:82px;min-width:0;flex:none;padding:8px;border:1px solid var(--line);border-radius:100px;background:var(--surface,var(--card-solid));color:var(--ink);font:700 12px Manrope,Cairo,system-ui,sans-serif;cursor:pointer}
+.nav-currency option{background:var(--bg);color:var(--ink)}
+.nav-currency:focus-visible{outline:2px solid var(--purple,#c39bff);outline-offset:3px}
+@media(max-width:1150px){body.portfolio-page .menu{display:none}body.portfolio-page .menu-toggle{display:flex}body.portfolio-page .menu.open{display:flex;position:absolute;inset-inline:0;top:100%;padding:12px 20px;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}body.portfolio-page .menu.open a{padding:8px 12px}}
+@media(max-width:600px){
+ html{scroll-padding-top:154px}
+ body.company-page header nav,body.portfolio-page .nav>.wrap{display:grid;grid-template-columns:minmax(0,1fr) 44px 44px;gap:6px 8px;height:auto;min-height:0;padding-block:8px}
+ body.company-page header .actions,body.portfolio-page .nav-actions{display:contents}
+ body.company-page header .logo,body.portfolio-page header .brand{grid-row:1;grid-column:1}
+ body.company-page header #theme,body.portfolio-page header #theme{grid-row:1;grid-column:2}
+ body.company-page header [data-nav-toggle],body.portfolio-page header [data-nav-toggle]{grid-row:1;grid-column:3}
+ header .locale-controls{grid-row:2;grid-column:1/-1;justify-self:center}
+ body.company-page header .nav-cta,body.portfolio-page .nav-actions>a[href="#contact"]{display:none}
+ body.company-page .links{top:100%}
+ body.portfolio-page .hero{padding-top:156px}
+}
+@media(max-width:600px){body.portfolio-page .nav>.wrap>nav{display:contents}}
