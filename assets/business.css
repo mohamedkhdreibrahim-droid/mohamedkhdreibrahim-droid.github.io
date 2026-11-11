@@ -7,7 +7,7 @@ body.company-page .hero .reveal{opacity:1;transform:none}
 .biz-package.featured .biz-label{color:var(--ink);border-color:var(--amber,#ffb23d)}
 .biz-package h3,.biz-sector h3{margin:0;font-size:25px;line-height:1.4;letter-spacing:-.4px}
 .biz-package p,.biz-sector p{margin:0;color:var(--muted);font-size:15px;line-height:1.85}
-.biz-price{color:var(--ink)!important;font-size:20px!important;font-weight:800;line-height:1.5!important}
+.biz-scope{color:var(--ink)!important;font-size:20px!important;font-weight:800;line-height:1.5!important}
 .biz-package ul{padding-inline-start:20px;margin:0 0 8px;display:grid;gap:10px;font-size:14px;line-height:1.8;color:var(--muted);flex:1}
 .biz-package li::marker{color:var(--purple,#c39bff)}
 .biz-package .btn,.biz-sector .btn{margin-top:auto;max-width:100%;font-size:14px;min-height:48px;text-align:center;white-space:normal}
