@@ -355,7 +355,7 @@
 
   <header class="nav" id="nav">
     <div class="wrap">
-      <a class="brand" href="#top" aria-label="Khidr AI، الصفحة الرئيسية"><span class="brand-mark" aria-hidden="true">خ</span><span dir="ltr">Khidr AI</span></a>
+      <a class="brand" href="#top" aria-label="mova creative، الصفحة الرئيسية"><span class="brand-mark" aria-hidden="true">خ</span><span dir="ltr">mova creative</span></a>
       <nav aria-label="التنقل الرئيسي">
         <ul class="menu">
           <li><a href="#services">الخدمات</a></li>
@@ -600,7 +600,7 @@
 
   <footer>
     <div class="wrap">
-      <span>© 2026 Khidr AI · محمد خضر · <a href="privacy.html">الخصوصية</a> · <a href="terms.html">الشروط</a></span>
+      <span>© 2026 mova creative · محمد خضر · <a href="privacy.html">الخصوصية</a> · <a href="terms.html">الشروط</a></span>
       <div class="socials">
         <a href="https://www.youtube.com/@mohamedibrahimkhdre" aria-label="يوتيوب"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
         <a href="https://www.instagram.com/mohamed__khidr/" aria-label="إنستجرام"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
@@ -741,10 +741,10 @@
       e.preventDefault();
       const f = e.target, msg = document.getElementById('form-msg');
       if (!f.name.value.trim()) { msg.textContent = 'اكتب اسمك عشان نعرف نرد عليك.'; f.name.focus(); return; }
-      const text = `أهلاً Khidr AI 👋\nأنا ${f.name.value.trim()}${f.biz.value.trim() ? ' من ' + f.biz.value.trim() : ''}.\nمحتاج: ${f.svc.value}.\n${f.msg.value.trim()}`;
+      const text = `أهلاً mova creative 👋\nأنا ${f.name.value.trim()}${f.biz.value.trim() ? ' من ' + f.biz.value.trim() : ''}.\nمحتاج: ${f.svc.value}.\n${f.msg.value.trim()}`;
       if (e.submitter && e.submitter.value === 'mail') {
         msg.textContent = 'بنفتح الإيميل…';
-        location.href = 'mailto:mohamed.khdre.ibrahim@gmail.com?subject=' + encodeURIComponent('طلب خدمة من موقع Khidr AI: ' + f.svc.value) + '&body=' + encodeURIComponent(text);
+        location.href = 'mailto:mohamed.khdre.ibrahim@gmail.com?subject=' + encodeURIComponent('طلب خدمة من موقع mova creative: ' + f.svc.value) + '&body=' + encodeURIComponent(text);
       } else {
         msg.textContent = 'بنفتح واتساب…';
         window.open('https://wa.me/201558664894?text=' + encodeURIComponent(text), '_blank', 'noopener');
