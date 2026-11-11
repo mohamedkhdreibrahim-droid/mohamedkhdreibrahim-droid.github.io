@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>محمد خضر | أنيميتور موشن جرافيك وفيديوهات بالذكاء الاصطناعي</title>
   <meta name="description" content="محمد خضر، أنيميتور موشن جرافيك. إعلانات وريلز وفيديوهات بالذكاء الاصطناعي لبراندات وجمعيات وقنوات، من الفكرة لآخر فريم. شوف الشغل وكلّمني على واتساب.">
-  <link rel="canonical" href="https://mohamedkhdreibrahim-droid.github.io/">
-  <link rel="alternate" hreflang="ar" href="https://mohamedkhdreibrahim-droid.github.io/">
-  <link rel="alternate" hreflang="en" href="https://mohamedkhdreibrahim-droid.github.io/en/">
+  <link rel="canonical" href="https://mova-creative-eg.pages.dev/">
+  <link rel="alternate" hreflang="ar" href="https://mova-creative-eg.pages.dev/">
+  <link rel="alternate" hreflang="en" href="https://mova-creative-eg.pages.dev/en/">
   <link rel="icon" href="app-icon.png">
   <meta property="og:title" content="محمد خضر | أنيميتور موشن جرافيك وفيديو بالذكاء الاصطناعي">
   <meta property="og:description" content="موشن جرافيك، وأنيميشن شخصيات، وفيديوهات بالذكاء الاصطناعي. شوف البورتفوليو.">
-  <meta property="og:image" content="https://mohamedkhdreibrahim-droid.github.io/og.jpg">
+  <meta property="og:image" content="https://mova-creative-eg.pages.dev/og.jpg">
   <meta name="theme-color" content="#06261c">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mohamedkhdreibrahim-droid.github.io/">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mohamed Khidr", "alternateName": "\u0645\u062d\u0645\u062f \u062e\u0636\u0631", "jobTitle": "Motion Graphics Animator & AI Video Creator", "url": "https://mohamedkhdreibrahim-droid.github.io/", "image": "https://mohamedkhdreibrahim-droid.github.io/media/mohamed.jpg", "telephone": "+201558664894", "knowsAbout": ["Motion graphics", "2D character animation", "AI video generation", "Kinetic typography", "After Effects", "Premiere Pro"], "sameAs": ["https://www.youtube.com/@mohamedibrahimkhdre", "https://www.instagram.com/mohamed__khidr/", "https://www.tiktok.com/@khidr_ai", "https://www.facebook.com/khidrai.eg"]}</script>
+  <meta property="og:url" content="https://mova-creative-eg.pages.dev/">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mohamed Khidr", "alternateName": "\u0645\u062d\u0645\u062f \u062e\u0636\u0631", "jobTitle": "Motion Graphics Animator & AI Video Creator", "url": "https://mova-creative-eg.pages.dev/", "image": "https://mova-creative-eg.pages.dev/media/mohamed.jpg", "telephone": "+201558664894", "knowsAbout": ["Motion graphics", "2D character animation", "AI video generation", "Kinetic typography", "After Effects", "Premiere Pro"], "sameAs": ["https://www.youtube.com/@mohamedibrahimkhdre", "https://www.instagram.com/mohamed__khidr/", "https://www.tiktok.com/@khidr_ai", "https://www.facebook.com/khidrai.eg"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script>
-    (function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('kh-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+    (function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('mova-theme')||localStorage.getItem('kh-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}})();
   </script>
   <style>
     :root{
@@ -331,8 +331,8 @@
       .bar .fill{transform:none}
     }
   </style>
-</head>
-<body>
+<link rel="stylesheet" href="/assets/site.css?v=20261111"><script src="/assets/site.js?v=20261111" defer></script></head>
+<body class="portfolio-page">
   <a class="skip" href="#main">روح للمحتوى</a>
 
   <!-- svg sprite -->
@@ -355,9 +355,9 @@
 
   <header class="nav" id="nav">
     <div class="wrap">
-      <a class="brand" href="#top" aria-label="mova creative، الصفحة الرئيسية"><span class="brand-mark" aria-hidden="true">خ</span><span dir="ltr">mova creative</span></a>
+      <a class="brand" href="/ar-company/" aria-label="MOVA Creative"><img class="brand-logo" data-brand-logo src="/assets/mova-logo-on-dark.svg" alt="MOVA Creative" width="140" height="59"></a>
       <nav aria-label="التنقل الرئيسي">
-        <ul class="menu">
+        <ul class="menu" id="portfolioNav">
           <li><a href="#services">الخدمات</a></li>
           <li><a href="#work">الشغل</a></li>
           <li><a href="#gifts">هدايا</a></li>
@@ -365,7 +365,7 @@
           <li><a href="#faq">الأسئلة</a></li>
         </ul>
       </nav>
-      <div class="nav-actions">
+      <div class="nav-actions"><button class="menu-toggle" id="portfolioMenu" data-nav-toggle="portfolioNav" type="button" aria-controls="portfolioNav" aria-expanded="false" aria-label="فتح القائمة">☰</button>
         <a class="icon-btn lang" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
         <button class="icon-btn" id="theme" type="button" aria-label="تبديل الوضع الفاتح والداكن">
           <svg aria-hidden="true"><use href="#i-sun"/></svg>
@@ -397,7 +397,7 @@
         </div>
         <div class="device-wrap rv" style="--i:2">
           <div class="device">
-            <video src="media/work/showreel.mp4" poster="media/work/showreel.jpg" muted loop playsinline autoplay preload="metadata" aria-label="شوريل: لقطات من شغلي"></video>
+            <video src="media/work/showreel.mp4" poster="media/work/showreel.jpg" muted loop playsinline controls data-auto-preview preload="metadata" aria-label="شوريل: لقطات من شغلي"></video>
           </div>
           <div class="badge-float one" aria-hidden="true"><b>AI</b> فيديو بالذكاء الاصطناعي</div>
           <div class="badge-float two" aria-hidden="true"><b>+55</b> فيديو في البورتفوليو</div>
@@ -616,16 +616,6 @@
   <script>
     // TODO(محمد): غيّر الأرقام في data-count فوق للأرقام الحقيقية، واملا آراء العملاء وأسماء الجهات قبل النشر.
     const root = document.documentElement;
-    const themeBtn = document.getElementById('theme');
-    const setIcon = () => themeBtn.querySelector('use').setAttribute('href', root.dataset.theme === 'dark' ? '#i-sun' : '#i-moon');
-    setIcon();
-    themeBtn.addEventListener('click', () => {
-      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem('kh-theme', root.dataset.theme); } catch (e) {}
-      document.querySelector('meta[name="theme-color"]').content = root.dataset.theme === 'dark' ? '#06261c' : '#f6f1e7';
-      setIcon();
-    });
-
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('solid', scrollY > 20);
     onScroll(); addEventListener('scroll', onScroll, { passive: true });
@@ -692,7 +682,7 @@
     const catName = {ai:'ذكاء اصطناعي',hooks:'هوك',ads:'إعلان',charity:'جمعية خيرية',social:'سوشيال',motion:'موشن',voice:'فويس',youtube:'يوتيوب'};
     const touch = matchMedia('(hover: none)').matches;
     const vio = new IntersectionObserver((es) => es.forEach((e) => { const v = e.target;
-      e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
+      (e.isIntersecting && !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden) ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
     const render = () => {
       const q = query.trim().toLowerCase();
       const list = items.filter((it) => (filter === 'all' || it.cat === filter) && (!q || (it.title + ' ' + catName[it.cat]).toLowerCase().includes(q)));
@@ -711,7 +701,7 @@
       moreBtn.hidden = list.length <= shown;
       if (touch) grid.querySelectorAll('video').forEach((v) => vio.observe(v));
     };
-    grid.addEventListener('pointerover', (e) => { if (touch) return; const v = e.target.closest('.card')?.querySelector('video'); if (v) v.play().catch(() => {}); });
+    grid.addEventListener('pointerover', (e) => { if (touch || matchMedia('(prefers-reduced-motion: reduce)').matches) return; const v = e.target.closest('.card')?.querySelector('video'); if (v) v.play().catch(() => {}); });
     grid.addEventListener('pointerout', (e) => { const c = e.target.closest('.card'); if (c && !c.contains(e.relatedTarget)) c.querySelector('video')?.pause(); });
     document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => {
       document.querySelectorAll('.chip').forEach((x) => x.setAttribute('aria-pressed', x === c));

@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>MOVA Creative | بورتفوليو أعمال موفا</title>
   <meta name="description" content="معرض أعمال MOVA Creative في الموشن جرافيك والأنيميشن وإنتاج الفيديو بالذكاء الاصطناعي.">
-  <link rel="canonical" href="https://mohamedkhdreibrahim-droid.github.io/ar/">
-  <link rel="alternate" hreflang="en" href="https://mohamedkhdreibrahim-droid.github.io/portfolio/">
-  <link rel="alternate" hreflang="ar" href="https://mohamedkhdreibrahim-droid.github.io/ar/">
-  <link rel="alternate" hreflang="x-default" href="https://mohamedkhdreibrahim-droid.github.io/portfolio/">
+  <link rel="canonical" href="https://mova-creative-eg.pages.dev/ar/">
+  <link rel="alternate" hreflang="en" href="https://mova-creative-eg.pages.dev/portfolio/">
+  <link rel="alternate" hreflang="ar" href="https://mova-creative-eg.pages.dev/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://mova-creative-eg.pages.dev/portfolio/">
   <link rel="icon" type="image/svg+xml" href="/mova-logo.svg">
   <meta property="og:title" content="MOVA Creative | من أعمالنا">
-  <meta property="og:description" content="موشن جرافيك، وأنيميشن شMصيات، وفيديوهات بالذكاء الاصطناعي. شوف البورتفوليو.">
-  <meta property="og:image" content="https://mohamedkhdreibrahim-droid.github.io/og.jpg">
+  <meta property="og:description" content="موشن جرافيك، وأنيميشن شخصيات، وفيديوهات بالذكاء الاصطناعي. شوف البورتفوليو.">
+  <meta property="og:image" content="https://mova-creative-eg.pages.dev/og.jpg">
   <meta name="theme-color" content="#0c0918">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mohamedkhdreibrahim-droid.github.io/ar/">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"MOVA Creative Portfolio","url":"https://mohamedkhdreibrahim-droid.github.io/ar/","publisher":{"@type":"Organization","name":"MOVA Creative"}}</script>
+  <meta property="og:url" content="https://mova-creative-eg.pages.dev/ar/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"MOVA Creative Portfolio","url":"https://mova-creative-eg.pages.dev/ar/","publisher":{"@type":"Organization","name":"MOVA Creative"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script>
-    (function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('kh-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+    (function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('mova-theme')||localStorage.getItem('kh-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}})();
   </script>
   <style>
     :root{
@@ -335,8 +335,8 @@
 /* MOVA visual identity */
 .brand-mark{background:linear-gradient(135deg,#c39bff,#8e4de8)!important;color:#fff!important}.nav{background:color-mix(in srgb,var(--bg) 94%,transparent)}.hero .orb{background:radial-gradient(circle,#8e4de844,transparent 70%)!important}.gold{color:var(--gold)}.btn-gold{background:linear-gradient(135deg,#ffdf77,#ffb23d)!important;color:#241328!important}.portrait{box-shadow:none!important}.skills{align-items:center}
 </style>
-</head>
-<body>
+<link rel="stylesheet" href="/assets/site.css?v=20261111"><script src="/assets/site.js?v=20261111" defer></script></head>
+<body class="portfolio-page">
   <a class="skip" href="#main">روح للمحتوى</a>
 
   <!-- svg sprite -->
@@ -359,17 +359,17 @@
 
   <header class="nav" id="nav">
     <div class="wrap">
-      <a class="brand" href="#top" aria-label="MOVA Creative، الصفحة الرئيسية"><img src="/mova-logo.svg" alt="" style="width:65px;height:auto;vertical-align:middle"><span dir="ltr">MOVA Creative</span></a>
+      <a class="brand" href="/ar-company/" aria-label="MOVA Creative"><img class="brand-logo" data-brand-logo src="/assets/mova-logo-on-dark.svg" alt="MOVA Creative" width="140" height="59"></a>
       <nav aria-label="التنقل الرئيسي">
-        <ul class="menu">
-          <li><a href="/" style="color:#ffb23d;font-weight:800">موقع الشركة ↗</a></li><li><a href="#services">الخدمات</a></li>
+        <ul class="menu" id="portfolioNav">
+          <li><a href="/ar-company/" style="color:#ffb23d;font-weight:800">موقع الشركة</a></li><li><a href="#services">الخدمات</a></li>
           <li><a href="#work">الشغل</a></li>
           <li><a href="#gifts">هدايا</a></li>
           <li><a href="#process">طريقتنا</a></li>
           <li><a href="#faq">الأسئلة</a></li>
         </ul>
       </nav>
-      <div class="nav-actions"><a href="/" class="btn btn-line" style="padding:8px 14px">MOVA ↗</a>
+      <div class="nav-actions"><button class="menu-toggle" id="portfolioMenu" data-nav-toggle="portfolioNav" type="button" aria-controls="portfolioNav" aria-expanded="false" aria-label="فتح القائمة">☰</button>
         <a class="icon-btn lang" href="/portfolio/" hreflang="en" lang="en" aria-label="English version">EN</a>
         <button class="icon-btn" id="theme" type="button" aria-label="تبديل الوضع الفاتح والداكن">
           <svg aria-hidden="true"><use href="#i-sun"/></svg>
@@ -401,7 +401,7 @@
         </div>
         <div class="device-wrap rv" style="--i:2">
           <div class="device">
-            <video src="../media/work/showreel.mp4" poster="../media/work/showreel.jpg" muted loop playsinline autoplay preload="metadata" aria-label="شوريل: لقطات من شغلي"></video>
+            <video src="../media/work/showreel.mp4" poster="../media/work/showreel.jpg" muted loop playsinline controls data-auto-preview preload="metadata" aria-label="شوريل: لقطات من شغلي"></video>
           </div>
           <div class="badge-float one" aria-hidden="true"><b>AI</b> فيديو بالذكاء الاصطناعي</div>
           <div class="badge-float two" aria-hidden="true"><b>+55</b> فيديو في البورتفوليو</div>
@@ -542,7 +542,7 @@
     <section class="sec" id="about" aria-labelledby="ab-t" style="background:var(--bg-2)">
       <div class="wrap skills">
         <div>
-          <img class="portrait rv" src="/mova-logo.svg" alt="MOVA Creative" width="180" height="100" loading="lazy" style="width:180px;height:auto;object-fit:contain;border:0;border-radius:0;background:transparent">
+          <img class="portrait rv" data-brand-logo src="/assets/mova-logo-on-dark.svg" alt="MOVA Creative" width="180" height="100" loading="lazy" style="width:180px;height:auto;object-fit:contain;border:0;border-radius:0;background:transparent">
           <span class="kicker rv">عن أعمالنا</span>
           <h2 id="ab-t" class="display h2 rv" style="--i:1" >MOVA Creative.<br><span class="gold">بورتفوليو أعمالنا.</span></h2>
           <p class="lede rv" style="--i:2;margin-top:1.2rem">بنقدّم أعمال موشن جرافيك وأنيميشن وفيديو بالذكاء الاصطناعي، مع اهتمام بالتفاصيل البصرية وجودة التنفيذ من الفكرة لآخر فريم.</p>
@@ -620,16 +620,6 @@
   <script>
     // TODO(محمد): غيّر الأرقام في data-count فوق للأرقام الحقيقية، واملا آراء العملاء وأسماء الجهات قبل النشر.
     const root = document.documentElement;
-    const themeBtn = document.getElementById('theme');
-    const setIcon = () => themeBtn.querySelector('use').setAttribute('href', root.dataset.theme === 'dark' ? '#i-sun' : '#i-moon');
-    setIcon();
-    themeBtn.addEventListener('click', () => {
-      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem('kh-theme', root.dataset.theme); } catch (e) {}
-      document.querySelector('meta[name="theme-color"]').content = root.dataset.theme === 'dark' ? '#06261c' : '#f6f1e7';
-      setIcon();
-    });
-
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('solid', scrollY > 20);
     onScroll(); addEventListener('scroll', onScroll, { passive: true });
@@ -696,7 +686,7 @@
     const catName = {ai:'ذكاء اصطناعي',hooks:'هوك',ads:'إعلان',charity:'جمعية خيرية',social:'سوشيال',motion:'موشن',voice:'فويس',youtube:'يوتيوب'};
     const touch = matchMedia('(hover: none)').matches;
     const vio = new IntersectionObserver((es) => es.forEach((e) => { const v = e.target;
-      e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
+      (e.isIntersecting && !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden) ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
     const render = () => {
       const q = query.trim().toLowerCase();
       const list = items.filter((it) => (filter === 'all' || it.cat === filter) && (!q || (it.title + ' ' + catName[it.cat]).toLowerCase().includes(q)));
@@ -715,7 +705,7 @@
       moreBtn.hidden = list.length <= shown;
       if (touch) grid.querySelectorAll('video').forEach((v) => vio.observe(v));
     };
-    grid.addEventListener('pointerover', (e) => { if (touch) return; const v = e.target.closest('.card')?.querySelector('video'); if (v) v.play().catch(() => {}); });
+    grid.addEventListener('pointerover', (e) => { if (touch || matchMedia('(prefers-reduced-motion: reduce)').matches) return; const v = e.target.closest('.card')?.querySelector('video'); if (v) v.play().catch(() => {}); });
     grid.addEventListener('pointerout', (e) => { const c = e.target.closest('.card'); if (c && !c.contains(e.relatedTarget)) c.querySelector('video')?.pause(); });
     document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => {
       document.querySelectorAll('.chip').forEach((x) => x.setAttribute('aria-pressed', x === c));

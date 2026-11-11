@@ -1,29 +1,29 @@
 <!doctype html>
 <html lang="en" dir="ltr" data-theme="dark">
 <head>
-  <base href="/">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>MOVA Creative | Portfolio & Selected Work</title>
   <meta name="description" content="Explore MOVA Creative’s portfolio of motion graphics, animation, commercial edits and AI video production.">
-  <link rel="canonical" href="https://mohamedkhdreibrahim-droid.github.io/portfolio/">
-  <link rel="alternate" hreflang="en" href="https://mohamedkhdreibrahim-droid.github.io/portfolio/">
-  <link rel="alternate" hreflang="ar" href="https://mohamedkhdreibrahim-droid.github.io/ar/">
-  <link rel="alternate" hreflang="x-default" href="https://mohamedkhdreibrahim-droid.github.io/portfolio/">
+  <link rel="canonical" href="https://mova-creative-eg.pages.dev/portfolio/">
+  <link rel="alternate" hreflang="en" href="https://mova-creative-eg.pages.dev/portfolio/">
+  <link rel="alternate" hreflang="ar" href="https://mova-creative-eg.pages.dev/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://mova-creative-eg.pages.dev/portfolio/">
   <link rel="icon" type="image/svg+xml" href="/mova-logo.svg">
   <meta property="og:title" content="MOVA Creative | Portfolio">
   <meta property="og:description" content="Selected motion graphics, animation and AI video work from the MOVA Creative team.">
-  <meta property="og:image" content="https://mohamedkhdreibrahim-droid.github.io/og.jpg">
+  <meta property="og:image" content="https://mova-creative-eg.pages.dev/og.jpg">
   <meta name="theme-color" content="#0c0918">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mohamedkhdreibrahim-droid.github.io/portfolio/">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"MOVA Creative Portfolio","url":"https://mohamedkhdreibrahim-droid.github.io/portfolio/","publisher":{"@type":"Organization","name":"MOVA Creative","url":"https://mohamedkhdreibrahim-droid.github.io/"}}</script>
+  <meta property="og:url" content="https://mova-creative-eg.pages.dev/portfolio/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"MOVA Creative Portfolio","url":"https://mova-creative-eg.pages.dev/portfolio/","publisher":{"@type":"Organization","name":"MOVA Creative","url":"https://mova-creative-eg.pages.dev/"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script>
-    (function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('kh-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+    (function(){document.documentElement.classList.add('js');try{var t=localStorage.getItem('mova-theme')||localStorage.getItem('kh-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}})();
   </script>
   <style>
     :root{
@@ -340,12 +340,12 @@
       .js .rv{opacity:1;transform:none}
       .bar .fill{transform:none}
     }
-  
+
 /* MOVA visual identity */
 .brand-mark{background:linear-gradient(135deg,#c39bff,#8e4de8)!important;color:#fff!important}.nav{background:color-mix(in srgb,var(--bg) 94%,transparent)}.hero .orb{background:radial-gradient(circle,#8e4de844,transparent 70%)!important}.gold{color:var(--gold)}.btn-gold{background:linear-gradient(135deg,#ffdf77,#ffb23d)!important;color:#241328!important}.portrait{box-shadow:none!important}.skills{align-items:center}
 </style>
-</head>
-<body>
+<link rel="stylesheet" href="/assets/site.css?v=20261111"><script src="/assets/site.js?v=20261111" defer></script></head>
+<body class="portfolio-page">
   <a class="skip" href="#main">Skip to content</a>
 
   <!-- svg sprite -->
@@ -368,18 +368,18 @@
 
   <header class="nav" id="nav">
     <div class="wrap">
-      <a class="brand" href="#top" aria-label="MOVA Creative, home"><img src="/mova-logo.svg" alt="" style="width:65px;height:auto;vertical-align:middle"><span dir="ltr">MOVA Creative</span></a>
+      <a class="brand" href="/" aria-label="MOVA Creative"><img class="brand-logo" data-brand-logo src="/assets/mova-logo-on-dark.svg" alt="MOVA Creative" width="140" height="59"></a>
       <nav aria-label="Main navigation">
-        <ul class="menu">
-          <li><a href="/" style="color:#ffb23d;font-weight:800">MOVA Creative ↗</a></li><li><a href="#services">Services</a></li>
+        <ul class="menu" id="portfolioNav">
+          <li><a href="/" style="color:#ffb23d;font-weight:800">Home</a></li><li><a href="#services">Services</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#gifts">Gifts</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
-      <div class="nav-actions"><a class="btn btn-line" href="/" style="min-height:40px;padding:.4rem .9rem;font-size:13px">MOVA ↗</a>
-        <a class="icon-btn lang" href="/ar-company/" hreflang="ar" lang="ar" aria-label="النسخة العربية">ع</a>
+      <div class="nav-actions"><button class="menu-toggle" id="portfolioMenu" data-nav-toggle="portfolioNav" type="button" aria-controls="portfolioNav" aria-expanded="false" aria-label="Open menu">☰</button>
+        <a class="icon-btn lang" href="/ar/" hreflang="ar" lang="ar" aria-label="النسخة العربية">ع</a>
         <button class="icon-btn" id="theme" type="button" aria-label="Toggle light and dark mode">
           <svg aria-hidden="true"><use href="#i-sun"/></svg>
         </button>
@@ -388,7 +388,7 @@
     </div>
   </header>
 
-  <main id="main"><div class="wrap" style="padding-top:94px;margin-bottom:-70px"><a href="/" style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:99px;padding:8px 18px;background:var(--card-solid);color:var(--ink);font-size:13px;font-weight:700"><img src="/mova-logo.svg" alt="" width="64" height="27" style="width:64px;height:auto"> Explore MOVA Creative ↗</a></div>
+  <main id="main">
     <!-- HERO -->
     <section class="hero" id="top" aria-labelledby="hero-t">
       <div class="orb a" aria-hidden="true"></div>
@@ -410,7 +410,7 @@
         </div>
         <div class="device-wrap rv" style="--i:2">
           <div class="device">
-            <video src="media/work/showreel.mp4" poster="media/work/showreel.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Showreel: highlights from my work"></video>
+            <video src="/media/work/showreel.mp4" poster="/media/work/showreel.jpg" muted loop playsinline controls data-auto-preview preload="metadata" aria-label="Showreel: highlights from my work"></video>
           </div>
           <div class="badge-float one" aria-hidden="true"><b>AI</b> AI video</div>
           <div class="badge-float two" aria-hidden="true"><b>+55</b> videos in the portfolio</div>
@@ -533,9 +533,9 @@
           <p class="lede rv" style="--i:2">Tools I use in my own work, ready to download. All licensed for commercial use.</p>
         </div>
         <div class="gifts">
-          <article class="gift rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div><span class="gtag">ZIP · 0.6 MB</span><h3 class="h3">Motion graphics skill for Claude</h3><p>My full method for 9:16 motion reels, packaged as a Claude Code skill, plus a ready reel template you can edit and render.</p><a class="btn btn-gold" href="gifts/khidr-motion-graphics-skill.zip" download>Download the skill</a></article>
-          <article class="gift rv" style="--i:1"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-mic"/></svg></div><span class="gtag">ZIP · 27 MB · CC0</span><h3 class="h3">Sound effects pack</h3><p>113 sound effects and 15 music tracks, CC0: use them in commercial and monetized videos with no attribution.</p><a class="btn btn-gold" href="gifts/khidr-sfx-pack-cc0.zip" download>Download the pack</a></article>
-          <article class="gift rv" style="--i:2"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><span class="gtag">TXT</span><h3 class="h3">Ready animation prompts</h3><p>Prompts to animate products, characters and scenes with AI, plus a pre-publish checklist.</p><div class="gift-links"><a class="btn btn-gold" href="gifts/animation-prompts.txt" download>Prompts</a><a class="btn btn-line" href="gifts/animation-checklist.txt" download>Checklist</a></div></article>
+          <article class="gift rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-spark"/></svg></div><span class="gtag">ZIP · 0.6 MB</span><h3 class="h3">Motion graphics skill for Claude</h3><p>My full method for 9:16 motion reels, packaged as a Claude Code skill, plus a ready reel template you can edit and render.</p><a class="btn btn-gold" href="/gifts/khidr-motion-graphics-skill.zip" download>Download the skill</a></article>
+          <article class="gift rv" style="--i:1"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-mic"/></svg></div><span class="gtag">ZIP · 27 MB · CC0</span><h3 class="h3">Sound effects pack</h3><p>113 sound effects and 15 music tracks, CC0: use them in commercial and monetized videos with no attribution.</p><a class="btn btn-gold" href="/gifts/khidr-sfx-pack-cc0.zip" download>Download the pack</a></article>
+          <article class="gift rv" style="--i:2"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><span class="gtag">TXT</span><h3 class="h3">Ready animation prompts</h3><p>Prompts to animate products, characters and scenes with AI, plus a pre-publish checklist.</p><div class="gift-links"><a class="btn btn-gold" href="/gifts/animation-prompts.txt" download>Prompts</a><a class="btn btn-line" href="/gifts/animation-checklist.txt" download>Checklist</a></div></article>
           <article class="gift wide rv"><div class="svc-ico"><svg aria-hidden="true"><use href="#i-play"/></svg></div><h3 class="h3">Free plugins I recommend</h3><p>Free After Effects plugins from their official sources. Download from the makers themselves for the latest, safe version.</p>
             <ul class="tools">
               <li><a href="https://www.videocopilot.net/blog/2016/03/new-plugin-saber-now-available-free/" target="_blank" rel="noopener"><b>Saber</b><span>Light, neon and energy · Video Copilot</span></a></li>
@@ -551,7 +551,7 @@
     <section class="sec" id="about" aria-labelledby="ab-t" style="background:var(--bg-2)">
       <div class="wrap skills">
         <div>
-          <img class="portrait rv" src="/mova-logo.svg" alt="MOVA Creative" width="180" height="100" loading="lazy" style="width:180px;height:auto;object-fit:contain;border:0;border-radius:0;background:transparent">
+          <img class="portrait rv" data-brand-logo src="/assets/mova-logo-on-dark.svg" alt="MOVA Creative" width="180" height="100" loading="lazy" style="width:180px;height:auto;object-fit:contain;border:0;border-radius:0;background:transparent">
           <span class="kicker rv">About MOVA</span>
           <h2 id="ab-t" class="display h2 rv" style="--i:1" >MOVA Creative.<br><span class="gold">Our creative portfolio.</span></h2>
           <p class="lede rv" style="--i:2;margin-top:1.2rem">Our portfolio brings together motion graphics, animation and AI video production, with a focus on visual craft from concept to final frame.</p>
@@ -613,7 +613,7 @@
 
   <footer>
     <div class="wrap">
-      <span>© 2026 MOVA Creative · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+      <span>© 2026 MOVA Creative · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
       <div class="socials">
         <a href="https://www.youtube.com/@mohamedibrahimkhdre" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
         <a href="https://www.instagram.com/mohamed__khidr/" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
@@ -629,16 +629,6 @@
   <script>
     // TODO: real numbers in data-count, real testimonials.
     const root = document.documentElement;
-    const themeBtn = document.getElementById('theme');
-    const setIcon = () => themeBtn.querySelector('use').setAttribute('href', root.dataset.theme === 'dark' ? '#i-sun' : '#i-moon');
-    setIcon();
-    themeBtn.addEventListener('click', () => {
-      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem('kh-theme', root.dataset.theme); } catch (e) {}
-      document.querySelector('meta[name="theme-color"]').content = root.dataset.theme === 'dark' ? '#06261c' : '#f6f1e7';
-      setIcon();
-    });
-
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('solid', scrollY > 20);
     onScroll(); addEventListener('scroll', onScroll, { passive: true });
@@ -692,11 +682,11 @@
       ['mashareq-voice','voice','Mashareq — Voice-over'],
       ['ghumaiqa','charity','Ghumaiqa Orphan Care'],
       ['hail','charity','Hail Quran School'],
-      ['yt-01','motion','A reel made entirely with AI','media/yt-01/yt-01.mp4','media/yt-01/poster.jpg'],
+      ['yt-01','motion','A reel made entirely with AI','/media/yt-01/yt-01.mp4','/media/yt-01/poster.jpg'],
     ];
     const YT = [["FA2OTE4j2kc", "Fanz", 60], ["zEajkyEsP6E", "Sheikh Zayed Festival", 58], ["H-c9EJ1zqzw", "Leadership Innovation Forum", 67], ["sjzf-C7q43Y", "Al Arish Building", 146], ["-JZdejhYfYo", "The UAE", 134], ["8wf3LYC-Pro", "Aviation & Climate Change", 126], ["ka6kppyrpg0", "NEO", 48], ["rBd-zBpXR8w", "Al Muraihana", 104], ["a-UUB3VM9QM", "Chocolate", 322], ["q8XvHutUTeI", "Who is Mohamed bin Zayed, the new UAE President?", 161], ["gvlRMBKgszQ", "No way you don’t want it?", 25], ["FZXRECUIq6U", "Qatar Boats", 72], ["X-bw82aRv2I", "Coco Chanel", 276], ["XOgFw7A9b4k", "Donate", 21], ["v9oL6JrLzEw", "Ursla", 21], ["wbq7n9LqiWE", "GOUI", 61], ["LoChLU26UoU", "Orphan Sponsor", 21], ["eLrtkYj_80U", "Recitation", 46], ["nGFL3SbjAUM", "Dr. Sultan", 182], ["vCnmRisZo3M", "News bulletin", 88], ["EwVhu-eoah4", "Mlay 2", 22], ["8y3d2Q-BwEg", "Short animation", 9], ["9ETIi0EbKok", "Mlay", 26], ["TLp5kQ6K30o", "Makkah video", 20], ["rmpJdFkcuuQ", "Thomas Edison", 209], ["hTtvOQ3e_xI", "The ideal temperature", 52], ["0tSgO-IxCgQ", "UAE, a global hub for thinkers and creators", 17], ["4Yn8Q3U2LfY", "Audio piece", 29], ["Jmlbz44pMTg", "Nasr", 51], ["kWsK3kdO9gQ", "Turkey earthquake 🇹🇷", 66], ["CTxbruFFnNc", "Dubai, a destination for sports, even esports", 91], ["O2Y9ol8m9kU", "Why masks matter", 30], ["KXzBSiURAXM", "Sheikh Maher Al-Muaiqly", 52], ["OidiT-wVO54", "UAE, a line of defense", 91], ["yL_lWzDUgsY", "Dr. Reem", 54], ["PBDKZAgUq1U", "Sheikh Yasser Al-Dosari", 59], ["sMSZbVUDwhY", "Al Khalidi Hospital", 65], ["kkGCiTG6ltc", "Sheikh Mahmoud Khalil Al-Hussary", 23], ["s8_Yv8R339A", "Sheikh Saud Al-Shuraim", 38], ["V2mPQlxPiSY", "Sheikh Mohamed Refaat", 61]];
     const items = [
-      ...LOCAL.map(([id,cat,title,src,poster]) => ({kind:'local',id,cat,title,src:src||`media/work/${id}.mp4`,poster:poster||`media/work/${id}.jpg`})),
+      ...LOCAL.map(([id,cat,title,src,poster]) => ({kind:'local',id,cat,title,src:src||`/media/work/${id}.mp4`,poster:poster||`/media/work/${id}.jpg`})),
       ...YT.map(([id,title]) => ({kind:'yt',id,cat:'youtube',title,poster:`https://i.ytimg.com/vi/${id}/hqdefault.jpg`})),
     ];
     const grid = document.getElementById('work-grid'), empty = document.getElementById('work-empty'), moreBtn = document.getElementById('more');
@@ -705,7 +695,7 @@
     const catName = {ai:'AI',hooks:'Hook',ads:'Ad',charity:'Charity',social:'Social',motion:'Motion',voice:'Voice',youtube:'YouTube'};
     const touch = matchMedia('(hover: none)').matches;
     const vio = new IntersectionObserver((es) => es.forEach((e) => { const v = e.target;
-      e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
+      (e.isIntersecting && !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden) ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
     const render = () => {
       const q = query.trim().toLowerCase();
       const list = items.filter((it) => (filter === 'all' || it.cat === filter) && (!q || (it.title + ' ' + catName[it.cat]).toLowerCase().includes(q)));
@@ -724,7 +714,7 @@
       moreBtn.hidden = list.length <= shown;
       if (touch) grid.querySelectorAll('video').forEach((v) => vio.observe(v));
     };
-    grid.addEventListener('pointerover', (e) => { if (touch) return; const v = e.target.closest('.card')?.querySelector('video'); if (v) v.play().catch(() => {}); });
+    grid.addEventListener('pointerover', (e) => { if (touch || matchMedia('(prefers-reduced-motion: reduce)').matches) return; const v = e.target.closest('.card')?.querySelector('video'); if (v) v.play().catch(() => {}); });
     grid.addEventListener('pointerout', (e) => { const c = e.target.closest('.card'); if (c && !c.contains(e.relatedTarget)) c.querySelector('video')?.pause(); });
     document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => {
       document.querySelectorAll('.chip').forEach((x) => x.setAttribute('aria-pressed', x === c));

@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://mohamedkhdreibrahim-droid.github.io/sitemap.xml
+Sitemap: https://mova-creative-eg.pages.dev/sitemap.xml

@@ -1,0 +1,116 @@
+/* Shared MOVA presentation and interaction refinements. */
+html{scroll-padding-top:100px}
+[hidden]{display:none!important}
+button,a,input,textarea,select,summary{-webkit-tap-highlight-color:transparent}
+.arrow-icon{width:1em;height:1em;display:inline-block;vertical-align:-.12em;flex:none;margin-inline-start:.25em;stroke:currentColor;fill:none;stroke-width:1.7}
+.brand-logo{display:block;width:148px;height:auto;flex:none}
+.fab-hidden{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+.whatsapp,.wa-fab{transition:opacity .2s,visibility .2s,transform .2s}
+.menu-toggle{display:none}
+.search-status{color:var(--muted);padding:16px 0;margin:0}
+.work-card{text-align:start;color:inherit;font:inherit}
+.work-card .work-art{height:auto;aspect-ratio:16/10;background:#20112e}
+.work-card .work-art::before{display:none}
+.work-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%;transition:transform .35s}
+.play-badge{position:absolute;inset-inline-end:16px;bottom:16px;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#0c0918d9;border:1px solid #ffdf7780;color:#ffdf77}
+.play-badge svg{width:20px;height:20px;fill:currentColor}
+@media(hover:hover){.work-card:hover .work-art img{transform:scale(1.035)}}
+.project-viewer{width:min(100% - 24px,960px);max-height:calc(100dvh - 24px);padding:18px;border-radius:22px;border:1px solid #a77dd455;background:var(--bg);color:var(--ink);overflow:auto}
+.project-viewer::backdrop{background:#080510d9;backdrop-filter:blur(8px)}
+.project-viewer-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.project-viewer-head h2{font-size:20px;margin:0;line-height:1.4}
+.project-viewer-close{width:44px;height:44px;display:grid;place-items:center;flex:none;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);font-size:26px}
+.project-viewer video{display:block;width:100%;max-height:calc(100dvh - 140px);background:#080510;border-radius:12px;object-fit:contain}
+body:has(dialog[open]){overflow:hidden}
+
+/* Company home pages. */
+body.company-page header nav{gap:12px}
+body.company-page .logo{flex:0 0 148px;min-width:0}
+body.company-page .logo .brand-logo{width:148px!important;max-height:70px}
+body.company-page header .actions{gap:8px;flex-shrink:0}
+body.company-page .theme,body.company-page .mobile-toggle{width:44px;height:44px;min-width:44px;flex:none;padding:0;font-size:20px}
+body.company-page header .chip{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+body.company-page .hero{padding:48px 0;min-height:calc(100svh - 79px)}
+body.company-page .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}
+body.company-page .hero-grid>*{min-width:0}
+body.company-page .hero h1{font-size:clamp(38px,4.2vw,62px);line-height:1.2;letter-spacing:-1.5px;margin:18px 0}
+body.company-page .hero-buttons{margin-top:28px}
+body.company-page .links a{min-height:44px;display:flex;align-items:center}
+body.company-page .chip{min-height:44px}
+body.company-page .work-card{display:block}
+body.company-page .work-meta h3{font-size:21px;line-height:1.5}
+[data-theme=light] body.company-page .gradient{background-image:linear-gradient(100deg,#53228f,#7539bd 65%,#854400)}
+[data-theme=light] body.company-page .eyebrow,[data-theme=light] body.company-page .card .number{color:#965400}
+[data-theme=light] body.company-page .links a:hover{color:#854400}
+
+/* Portfolio layout: intrinsic text width must never expand the grid. */
+body.portfolio-page .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,4vw,64px)}
+body.portfolio-page .hero-grid>*{min-width:0;max-width:100%}
+body.portfolio-page :is(.contact,.skills,.services,.features,.work,.process,.gifts,.tools,.stats)>*{min-width:0}
+body.portfolio-page :is(input,select,textarea){min-width:0;max-width:100%}
+body.portfolio-page .wa-line{flex-wrap:wrap;gap:8px}
+body.portfolio-page .wa-line a{max-width:100%;overflow-wrap:anywhere}
+body.portfolio-page .nw{white-space:normal}
+body.portfolio-page .hero .h1{font-size:clamp(36px,4.3vw,64px);line-height:1.16}
+body.portfolio-page .hero .kicker{display:block;line-height:1.7}
+body.portfolio-page .hero .kicker::before{display:none}
+body.portfolio-page .hero .actions .btn{max-width:100%;white-space:normal;text-align:center}
+body.portfolio-page .device-wrap{width:min(100%,360px);padding:12px 24px}
+body.portfolio-page .device{width:100%;transform:rotate(-2deg)}
+body.portfolio-page .device video{background:#0c0918}
+body.portfolio-page .badge-float.one{inset-inline-start:0;top:14%}
+body.portfolio-page .badge-float.two{inset-inline-start:auto;inset-inline-end:0;bottom:14%}
+body.portfolio-page .brand{flex:none}
+body.portfolio-page .brand-logo{width:140px}
+body.portfolio-page .nav .wrap{gap:12px}
+body.portfolio-page .nav-actions{flex-shrink:0;gap:8px}
+body.portfolio-page .menu{gap:clamp(12px,1.4vw,22px)}
+body.portfolio-page .menu a{display:flex;align-items:center;min-height:44px}
+body.portfolio-page .menu-toggle{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-size:21px;align-items:center;justify-content:center;flex:none}
+body.portfolio-page .hero{padding-top:112px}
+body.portfolio-page .filters{max-width:100%;scrollbar-width:thin}
+body.portfolio-page .wa-fab::after{animation:none}
+[data-theme=light] body.portfolio-page .gold{color:#854400;background:none}
+body.portfolio-page .contact .gold{color:#ffdf77;background:none}
+@media(max-width:1000px){
+  body.portfolio-page .menu-toggle{display:flex}
+  body.portfolio-page .menu.open{display:flex;position:absolute;inset-inline:0;top:100%;padding:12px 20px;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 15px 24px #0002}
+  body.portfolio-page .menu.open a{padding:8px 12px}
+}
+@media(max-width:850px){
+  body.company-page .hero-grid{grid-template-columns:minmax(0,1fr)}
+  body.company-page .hero{min-height:auto;padding:44px 0}
+  body.company-page .hero-visual{max-width:460px}
+}
+@media(max-width:720px){
+  body.portfolio-page .hero-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+  body.portfolio-page .hero{padding:96px 0 52px}
+  body.portfolio-page .device-wrap{width:min(100%,320px);margin-top:0;padding:12px 24px}
+  body.portfolio-page .hero .h1{font-size:clamp(34px,9vw,46px)}
+  body.portfolio-page .hero .actions{margin-top:24px}
+  body.portfolio-page .trust{gap:12px 18px;margin-top:24px}
+  body.portfolio-page .nav .wrap{height:72px}
+}
+@media(max-width:600px){
+  body.company-page .logo{flex-basis:124px}
+  body.company-page .logo .brand-logo{width:124px!important}
+  body.company-page .hero h1{font-size:clamp(34px,8.8vw,42px);letter-spacing:-.8px}
+  body.company-page .hero-visual{aspect-ratio:1.35;max-width:400px}
+  body.company-page .lead{font-size:16px;line-height:1.8}
+  body.company-page .hero-buttons{gap:12px}
+  body.company-page .hero-buttons .btn{min-height:52px;padding:12px 22px}
+  body.company-page .links a{justify-content:center}
+  body.portfolio-page .nav-actions>a[href="#contact"]{display:none}
+  body.portfolio-page .brand-logo{width:112px}
+  .whatsapp,.wa-fab{left:auto;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:52px;height:52px}
+}
+@media(max-width:360px){
+  body.company-page .logo{flex-basis:100px}
+  body.company-page .logo .brand-logo{width:100px!important}
+  body.company-page header .chip{padding:8px 12px}
+  body.portfolio-page .brand-logo{width:104px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
