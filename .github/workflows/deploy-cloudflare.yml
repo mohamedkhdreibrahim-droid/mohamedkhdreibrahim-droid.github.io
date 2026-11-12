@@ -1,0 +1,47 @@
+name: Deploy to Cloudflare Pages
+
+# Every merge/push to main publishes the site to the Cloudflare Pages
+# project "mova-creative-eg" (https://mova-creative-eg.pages.dev).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-pages-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Cloudflare secrets
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$TOKEN" ] || [ -z "$ACCOUNT" ]; then
+            echo "::error::Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Build upload folder
+        run: |
+          mkdir -p ../site
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'CLAUDE.md' ./ ../site/
+          # Cloudflare Pages rejects files larger than 25 MiB.
+          big=$(find ../site -type f -size +25M)
+          if [ -n "$big" ]; then echo "::error::Files over 25 MiB: $big"; exit 1; fi
+          echo "Files: $(find ../site -type f | wc -l)"
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ../site --project-name mova-creative-eg --branch main --commit-hash ${{ github.sha }} --commit-message "${{ github.sha }}"
