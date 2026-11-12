@@ -33,7 +33,8 @@ jobs:
       - name: Build upload folder
         run: |
           mkdir -p ../site
-          rsync -a --exclude '.git' --exclude '.github' --exclude 'CLAUDE.md' ./ ../site/
+          # The SFX zip is over the 25 MiB limit; _redirects sends it to the GitHub copy.
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'CLAUDE.md' --exclude 'gifts/khidr-sfx-pack-cc0.zip' ./ ../site/
           # Cloudflare Pages rejects files larger than 25 MiB.
           big=$(find ../site -type f -size +25M)
           if [ -n "$big" ]; then echo "::error::Files over 25 MiB: $big"; exit 1; fi
