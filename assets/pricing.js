@@ -11,7 +11,7 @@
   // Final fees are anchored to USD (Leadership = 250 USD) with rounded local equivalents (≈54 EGP, 3.75 SAR, 3.67 AED per USD).
   // "list" is the pre-discount fee shown struck through; the saving is computed from the two values.
   const catalog = {
-    presence: { monthly: true, rates: { USD: 99, EGP: 5400, SAR: 375, AED: 365 } },
+    presence: { monthly: true, rates: { USD: 99, EGP: 5400, SAR: 375, AED: 365 }, firstMonth: { USD: 75, EGP: 3999, SAR: 279, AED: 275 } },
     growth: { monthly: true, rates: { USD: 175, EGP: 9500, SAR: 650, AED: 640 }, list: { USD: 195, EGP: 10500, SAR: 725, AED: 715 } },
     scale: { monthly: true, rates: { USD: 250, EGP: 13500, SAR: 940, AED: 920 }, list: { USD: 295, EGP: 15900, SAR: 1100, AED: 1085 } },
     campaign: { monthly: false, rates: { USD: 180, EGP: 9750, SAR: 675, AED: 660 } },
@@ -40,7 +40,8 @@
     const amount = item.rates[selectedCurrency];
     const base = item.list?.[selectedCurrency] || amount;
     const discount = Math.round((1 - amount / base) * 100);
-    return { ...item, base, discount, saving: base - amount, amount, currency: selectedCurrency };
+    const firstMonth = item.firstMonth?.[selectedCurrency] || 0;
+    return { ...item, base, discount, saving: base - amount, amount, firstMonth, currency: selectedCurrency };
   };
   const selection = form => {
     const key = form.elements.namedItem('package')?.value;
@@ -56,13 +57,15 @@
     if (!value) return [text('Price: tailored proposal for the selected markets.', 'السعر: عرض مخصص للأسواق المحددة.')];
     const lines = [`${value.monthly ? text('Monthly production fee', 'أتعاب الإنتاج الشهرية') : text('Project production fee', 'أتعاب إنتاج المشروع')}: ${money(value.amount, selectedCurrency)}`];
     if (value.discount) lines.push(`${text('Package discount', 'خصم الباقة')}: ${value.discount}% (${text('base fee', 'الأتعاب الأساسية')}: ${money(value.base, selectedCurrency)} — ${text('you save', 'توفير')} ${money(value.saving, selectedCurrency)})`);
+    if (value.firstMonth) lines.push(text(`Introductory offer for new clients: first month at ${money(value.firstMonth, selectedCurrency)}, then ${money(value.amount, selectedCurrency)} per month`, `عرض العملاء الجدد: أول شهر بـ ${money(value.firstMonth, selectedCurrency)}، ثم ${money(value.amount, selectedCurrency)} شهريًا`));
     const plan = (form.elements.engagement || form.elements.svc)?.value || '';
     if (value.monthly && /^retainer-(6|12)$/.test(plan)) {
       const months = Number(plan.split('-')[1]);
       const off = retainerDiscount[months];
       const monthly = Math.round(value.amount * (100 - off) / 100);
-      lines.push(`${text(`${months}-month partnership discount`, `خصم شراكة ${months === 12 ? '12 شهرًا' : '6 أشهر'}`)}: ${off}% — ${text('monthly fee', 'الأتعاب الشهرية')}: ${money(monthly, selectedCurrency)}`);
-      lines.push(`${text(`Production fees over ${months} months`, `إجمالي أتعاب الإنتاج خلال ${months} شهرًا`)}: ${money(monthly * months, selectedCurrency)}`);
+      const total = value.firstMonth ? value.firstMonth + monthly * (months - 1) : monthly * months;
+      lines.push(`${text(`${months}-month partnership discount`, `خصم شراكة ${months === 12 ? '12 شهرًا' : '6 أشهر'}`)}: ${off}% — ${text('monthly fee', 'الأتعاب الشهرية')}: ${money(monthly, selectedCurrency)}${value.firstMonth ? text(' from month two', ' من الشهر الثاني') : ''}`);
+      lines.push(`${text(`Production fees over ${months} months`, `إجمالي أتعاب الإنتاج خلال ${months === 12 ? '12 شهرًا' : '6 أشهر'}`)}: ${money(total, selectedCurrency)}`);
     }
     lines.push(text('Production fees for the displayed scope; applicable taxes and additional costs are confirmed in the final proposal.', 'أتعاب إنتاج للنطاق المعروض؛ تُحدد الضرائب الواجبة والتكاليف الإضافية في العرض النهائي.'));
     return lines;
@@ -88,8 +91,9 @@
         if (discounted) original.querySelector('s').textContent = money(value.base, currency);
       }
       if (badge) {
-        badge.hidden = !discounted;
+        badge.hidden = !discounted && !value?.firstMonth;
         if (discounted) badge.textContent = text(`${value.discount}% off · save ${money(value.saving, currency)}`, `خصم ${value.discount}% · وفّر ${money(value.saving, currency)}`);
+        else if (value?.firstMonth) badge.textContent = text(`New clients: first month ${money(value.firstMonth, currency)}`, `للعملاء الجدد: أول شهر بـ ${money(value.firstMonth, currency)}`);
       }
       const unit = card.querySelector('[data-price-unit]');
       if (unit) unit.hidden = !value;
