@@ -397,9 +397,9 @@
         </div>
         <div class="device-wrap rv" style="--i:2">
           <div class="device">
-            <video src="media/work/showreel.mp4" poster="media/work/showreel.jpg" muted loop playsinline controls data-auto-preview preload="metadata" aria-label="شوريل: لقطات من شغلي"></video>
+            <video src="media/work/showreel.mp4" poster="media/work/showreel.jpg" muted loop playsinline controls data-auto-preview autoplay preload="metadata" aria-label="شوريل: لقطات من شغلي"></video>
           </div>
-          <div class="badge-float one" aria-hidden="true"><b>AI</b> فيديو بالذكاء الاصطناعي</div>
+          <div class="badge-float one" aria-hidden="true" dir="ltr"><b>MOVA</b> Creative</div>
           <div class="badge-float two" aria-hidden="true"><b>+55</b> فيديو في البورتفوليو</div>
         </div>
       </div>
@@ -475,7 +475,7 @@
             <button class="chip" type="button" data-filter="charity" aria-pressed="false">جمعيات خيرية</button>
             <button class="chip" type="button" data-filter="social" aria-pressed="false">سوشيال</button>
             <button class="chip" type="button" data-filter="motion" aria-pressed="false">موشن</button>
-            <button class="chip" type="button" data-filter="ai" aria-pressed="false">ذكاء اصطناعي</button>
+            <button class="chip" type="button" data-filter="ai" aria-pressed="false">مرئيات</button>
             <button class="chip" type="button" data-filter="hooks" aria-pressed="false">هوكات</button>
             <button class="chip" type="button" data-filter="voice" aria-pressed="false">فويس</button>
             <button class="chip" type="button" data-filter="youtube" aria-pressed="false">على يوتيوب</button>
@@ -643,35 +643,35 @@
 
     // ===== portfolio: local files in media/work + YouTube playlist "Portfolio" =====
     const LOCAL = [
-      ['showreel','motion','شوريل 2026 — لقطات من شغلي'],
-      ['witty','ads','Witty — إعلان'],
-      ['ox-ai','ai','فيديو بالذكاء الاصطناعي — OX'],
-      ['sanad-screen','social','الشاشة اللي تقول مين باع — منصة سند'],
-      ['deema-ai','ai','ديما — شخصية بالذكاء الاصطناعي'],
-      ['astakrill','ads','صيدلية خبراء المجتمع — Astakrill'],
-      ['mosaly-ai1','ai','تطبيق المصلي — AI 1'],
-      ['royal-honey','ads','صيدلية خبراء المجتمع — العسل الملكي'],
-      ['stp-sufra','motion','سفرة — فيديو وصفة'],
-      ['seahouse','ads','Sea House'],
-      ['mosaly-ai2','ai','تطبيق المصلي — AI 2'],
-      ['hook-sanad-drop','hooks','هوك: شخصية سند تنزل من السقف'],
-      ['sanad-3steps','social','ثلاث خطوات مين باع — منصة سند'],
-      ['hook-field','hooks','هوك: نزول من السما بالذكاء الاصطناعي'],
-      ['sanad-white-friday','social','الجمعة البيضاء — منصة سند'],
-      ['pepsi','social','منصة سند — كيف تكسب بذكاء'],
-      ['abnaouna','charity','ابناؤنا — حضن أيتام'],
-      ['microsoft','social','منصة سند — شخصية سند'],
-      ['mashareq-hajj','charity','مشارق — أصعب سنين الحج'],
-      ['sanad-lies','social','يكذبون عليك — منصة سند'],
-      ['brand-watch','ads','إعلان براند ساعات'],
-      ['mastoura','charity','مستورة — سقيا الحجاج'],
-      ['vr-motion','motion','نظارة VR بعيون المصمم'],
-      ['qatami','charity','جمعية حائل — الشيخ ناصر القطامي'],
-      ['sanad-35','social','35 مؤثر — منصة سند'],
-      ['mashareq-voice','voice','مشارق — تعليق صوتي'],
-      ['ghumaiqa','charity','رعاية الأيتام بغميقة'],
-      ['hail','charity','تحفيظ حائل'],
-      ['yt-01','motion','ريل اتعمل كله بالذكاء الاصطناعي','media/yt-01/yt-01.mp4','media/yt-01/poster.jpg'],
+      ["showreel", "motion", "شوريل 2026 — لقطات من شغلي", "/media/work/showreel.mp4", "/media/work/showreel.jpg"],
+      ["sanad-yomor-alek", "social", "سند — يمر عليك", "/media/work/sanad-yomor-alek.mp4", "/media/work/sanad-yomor-alek.jpg"],
+      ["sanad-collaboration", "motion", "سند — طلبات التعاون", "/media/work/sanad-collaboration.mp4", "/media/work/sanad-collaboration.jpg"],
+      ["qatar-architecture-web", "motion", "قطر — مقتطف من فيلم معماري", "/media/work/qatar-architecture-web.mp4", "/media/work/qatar-architecture.jpg"],
+      ["sanad-screen", "social", "الشاشة اللي تقول مين باع — منصة سند", "/media/work/sanad-screen.mp4", "/media/work/sanad-screen.jpg"],
+      ["madina-quran-explainer", "motion", "تطبيق مصحف المدينة — فيديو تعريفي", "/media/work/madina-quran-explainer.mp4", "/media/work/madina-quran-explainer.jpg"],
+      ["sanad-campaign-motion", "motion", "سند — لوحة إدارة الحملات", "/media/work/sanad-campaign-motion.mp4", "/media/work/sanad-campaign-motion.jpg"],
+      ["mosaly-ai1", "ai", "تطبيق المصلي — فيديو ١", "/media/work/mosaly-ai1.mp4", "/media/work/mosaly-ai1.jpg"],
+      ["madina-app-launch", "ads", "مصحف المدينة — إعلان إطلاق التطبيق", "/media/work/madina-app-launch.mp4", "/media/work/madina-app-launch.jpg"],
+      ["stp-sufra", "motion", "سفرة — فيديو وصفة", "/media/work/stp-sufra.mp4", "/media/work/stp-sufra.jpg"],
+      ["sanad-social-score", "motion", "سند — الرصيد الاجتماعي الذكي", "/media/work/sanad-social-score.mp4", "/media/work/sanad-social-score.jpg"],
+      ["mosaly-ai2", "ai", "تطبيق المصلي — فيديو ٢", "/media/work/mosaly-ai2.mp4", "/media/work/mosaly-ai2.jpg"],
+      ["hook-sanad-drop", "hooks", "هوك: شخصية سند تنزل من السقف", "/media/work/hook-sanad-drop.mp4", "/media/work/hook-sanad-drop.jpg"],
+      ["sanad-3steps", "social", "ثلاث خطوات مين باع — منصة سند", "/media/work/sanad-3steps.mp4", "/media/work/sanad-3steps.jpg"],
+      ["madina-quran-memorization", "motion", "مصحف المدينة — جلسات تحفيظ القرآن", "/media/work/madina-quran-memorization.mp4", "/media/work/madina-quran-memorization.jpg"],
+      ["sanad-white-friday", "social", "الجمعة البيضاء — منصة سند", "/media/work/sanad-white-friday.mp4", "/media/work/sanad-white-friday.jpg"],
+      ["pepsi", "social", "منصة سند — كيف تكسب بذكاء", "/media/work/pepsi.mp4", "/media/work/pepsi.jpg"],
+      ["abnaouna", "charity", "ابناؤنا — حضن أيتام", "/media/work/abnaouna.mp4", "/media/work/abnaouna.jpg"],
+      ["microsoft", "social", "منصة سند — شخصية سند", "/media/work/microsoft.mp4", "/media/work/microsoft.jpg"],
+      ["mashareq-hajj", "charity", "مشارق — أصعب سنين الحج", "/media/work/mashareq-hajj.mp4", "/media/work/mashareq-hajj.jpg"],
+      ["sanad-lies", "social", "يكذبون عليك — منصة سند", "/media/work/sanad-lies.mp4", "/media/work/sanad-lies.jpg"],
+      ["brand-watch", "ads", "إعلان براند ساعات", "/media/work/brand-watch.mp4", "/media/work/brand-watch.jpg"],
+      ["mastoura", "charity", "مستورة — سقيا الحجاج", "/media/work/mastoura.mp4", "/media/work/mastoura.jpg"],
+      ["glubran-tiss", "ads", "Glubran Tiss 2 — إعلان منتج", "/media/work/glubran-tiss.mp4", "/media/work/glubran-tiss.jpg"],
+      ["qatami", "charity", "جمعية حائل — الشيخ ناصر القطامي", "/media/work/qatami.mp4", "/media/work/qatami.jpg"],
+      ["sanad-35", "social", "35 مؤثر — منصة سند", "/media/work/sanad-35.mp4", "/media/work/sanad-35.jpg"],
+      ["mashareq-voice", "voice", "مشارق — تعليق صوتي", "/media/work/mashareq-voice.mp4", "/media/work/mashareq-voice.jpg"],
+      ["hail", "charity", "تحفيظ حائل", "/media/work/hail.mp4", "/media/work/hail.jpg"],
+      ["yt-01", "motion", "MOVA Creative — ريل إنتاج مرئي", "/media/yt-01/yt-01.mp4", "/media/yt-01/poster.jpg"],
     ];
     const YT = [["FA2OTE4j2kc", "Fanz", 60], ["zEajkyEsP6E", "مهرجان الشيخ زايد", 58], ["H-c9EJ1zqzw", "منتدى الابتكار القيادي", 67], ["sjzf-C7q43Y", "بناء العريش", 146], ["-JZdejhYfYo", "الإمارات", 134], ["8wf3LYC-Pro", "الطائرات والتغيرات المناخية", 126], ["ka6kppyrpg0", "NEO", 48], ["rBd-zBpXR8w", "المريحانة", 104], ["a-UUB3VM9QM", "Chocolate", 322], ["q8XvHutUTeI", "من هو محمد بن زايد رئيس الإمارات الجديد؟", 161], ["gvlRMBKgszQ", "مستحيل ما ودك؟", 25], ["FZXRECUIq6U", "قطر للقوارب", 72], ["X-bw82aRv2I", "Coco Chanel", 276], ["XOgFw7A9b4k", "تبرع", 21], ["v9oL6JrLzEw", "Ursla", 21], ["wbq7n9LqiWE", "GOUI", 61], ["LoChLU26UoU", "كافل اليتيم", 21], ["eLrtkYj_80U", "تلاوة", 46], ["nGFL3SbjAUM", "Dr. Sultan", 182], ["vCnmRisZo3M", "نشرة أخبار", 88], ["EwVhu-eoah4", "Mlay 2", 22], ["8y3d2Q-BwEg", "أنيميشن قصير", 9], ["9ETIi0EbKok", "Mlay", 26], ["TLp5kQ6K30o", "فيديو مكة", 20], ["rmpJdFkcuuQ", "Thomas Edison", 209], ["hTtvOQ3e_xI", "درجة الحرارة المثالية", 52], ["0tSgO-IxCgQ", "الإمارات قبلة المفكرين والمبدعين عالميا", 17], ["4Yn8Q3U2LfY", "تجربة صوتية", 29], ["Jmlbz44pMTg", "نصر", 51], ["kWsK3kdO9gQ", "زلزال تركيا 🇹🇷", 66], ["CTxbruFFnNc", "دبي وجهةالرياضات   حتى الإلكترونية", 91], ["O2Y9ol8m9kU", "اهمية ارتداء الكمامات", 30], ["KXzBSiURAXM", "الشيخ ماهر المعيقلي", 52], ["OidiT-wVO54", "الامارات خط دفاع", 91], ["yL_lWzDUgsY", "د. ريم", 54], ["PBDKZAgUq1U", "الشيخ ياسر الدوسري", 59], ["sMSZbVUDwhY", "مستشفى الخالدي", 65], ["kkGCiTG6ltc", "الشيخ محمود خليل الحصري", 23], ["s8_Yv8R339A", "الشيخ سعود شريم", 38], ["V2mPQlxPiSY", "الشيخ محمد رفعت", 61]];
     const items = [
@@ -681,7 +681,7 @@
     const grid = document.getElementById('work-grid'), empty = document.getElementById('work-empty'), moreBtn = document.getElementById('more');
     const PAGE = matchMedia('(min-width: 1001px)').matches ? 9 : matchMedia('(min-width: 721px)').matches ? 8 : 6; let shown = PAGE, filter = 'all', query = '';
     const esc = (t) => t.replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-    const catName = {ai:'ذكاء اصطناعي',hooks:'هوك',ads:'إعلان',charity:'جمعية خيرية',social:'سوشيال',motion:'موشن',voice:'فويس',youtube:'يوتيوب'};
+    const catName = {ai:'مرئيات',hooks:'هوك',ads:'إعلان',charity:'جمعية خيرية',social:'سوشيال',motion:'موشن',voice:'فويس',youtube:'يوتيوب'};
     const touch = matchMedia('(hover: none)').matches;
     const vio = new IntersectionObserver((es) => es.forEach((e) => { const v = e.target;
       (e.isIntersecting && !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden) ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
