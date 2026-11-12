@@ -395,7 +395,7 @@
       <div class="orb b" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div>
-          <span class="kicker rv">MOVA Creative · Motion Graphics · Animation · AI</span>
+          <span class="kicker rv">MOVA Creative · Motion Graphics · Animation</span>
           <h1 id="hero-t" class="display h1 rv" style="--i:1"><span class="nw">Motion that stops the scroll.</span><br><span class="gold nw">Video that sells the idea.</span></h1>
           <p class="lede rv" style="--i:2">Explore selected motion graphics, campaigns and visual production behind the MOVA Creative portfolio.</p>
           <div class="actions rv" style="--i:3">
@@ -410,9 +410,9 @@
         </div>
         <div class="device-wrap rv" style="--i:2">
           <div class="device">
-            <video src="/media/work/showreel.mp4" poster="/media/work/showreel.jpg" muted loop playsinline controls data-auto-preview preload="metadata" aria-label="Showreel: highlights from my work"></video>
+            <video src="/media/work/showreel.mp4" poster="/media/work/showreel.jpg" muted loop playsinline controls data-auto-preview autoplay preload="metadata" aria-label="Showreel: highlights from my work"></video>
           </div>
-          <div class="badge-float one" aria-hidden="true"><b>AI</b> AI video</div>
+          <div class="badge-float one" aria-hidden="true" dir="ltr"><b>MOVA</b> Creative</div>
           <div class="badge-float two" aria-hidden="true"><b>+55</b> videos in the portfolio</div>
         </div>
       </div>
@@ -488,7 +488,7 @@
             <button class="chip" type="button" data-filter="charity" aria-pressed="false">Charities</button>
             <button class="chip" type="button" data-filter="social" aria-pressed="false">Social</button>
             <button class="chip" type="button" data-filter="motion" aria-pressed="false">Motion</button>
-            <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI</button>
+            <button class="chip" type="button" data-filter="ai" aria-pressed="false">Visuals</button>
             <button class="chip" type="button" data-filter="hooks" aria-pressed="false">Hooks</button>
             <button class="chip" type="button" data-filter="voice" aria-pressed="false">Voice</button>
             <button class="chip" type="button" data-filter="youtube" aria-pressed="false">On YouTube</button>
@@ -656,35 +656,35 @@
 
     // ===== portfolio: local files in media/work + YouTube playlist "Portfolio" =====
     const LOCAL = [
-      ['showreel','motion','Showreel 2026 — highlights'],
-      ['witty','ads','Witty — Ad'],
-      ['ox-ai','ai','AI video — OX'],
-      ['sanad-screen','social','The screen that shows who sold — Sanad Platform'],
-      ['deema-ai','ai','Deema — AI character'],
-      ['astakrill','ads','Khobraa Pharmacy — Astakrill'],
-      ['mosaly-ai1','ai','Al Mosaly app — AI 1'],
-      ['royal-honey','ads','Khobraa Pharmacy — Royal Honey'],
-      ['stp-sufra','motion','Sufra — Recipe video'],
-      ['seahouse','ads','Sea House'],
-      ['mosaly-ai2','ai','Al Mosaly app — AI 2'],
-      ['hook-sanad-drop','hooks','Hook: Sanad character drops in'],
-      ['sanad-3steps','social','Three Steps — Sanad Platform'],
-      ['hook-field','hooks','Hook: AI sky drop'],
-      ['sanad-white-friday','social','White Friday — Sanad Platform'],
-      ['pepsi','social','Sanad Platform — Earn smarter'],
-      ['abnaouna','charity','Abnaouna — Embracing orphans'],
-      ['microsoft','social','Sanad Platform — The Sanad character'],
-      ['mashareq-hajj','charity','Mashareq — The hardest Hajj years'],
-      ['sanad-lies','social','They’re Lying to You — Sanad Platform'],
-      ['brand-watch','ads','Watch brand ad'],
-      ['mastoura','charity','Mastoura — Water for pilgrims'],
-      ['vr-motion','motion','VR through a designer’s eyes'],
-      ['qatami','charity','Hail Charity — Sheikh Nasser Al-Qatami'],
-      ['sanad-35','social','35 Influencers — Sanad Platform'],
-      ['mashareq-voice','voice','Mashareq — Voice-over'],
-      ['ghumaiqa','charity','Ghumaiqa Orphan Care'],
-      ['hail','charity','Hail Quran School'],
-      ['yt-01','motion','A reel made entirely with AI','/media/yt-01/yt-01.mp4','/media/yt-01/poster.jpg'],
+      ["showreel", "motion", "Showreel 2026 — highlights", "/media/work/showreel.mp4", "/media/work/showreel.jpg"],
+      ["sanad-yomor-alek", "social", "Sanad — Yomor Alek", "/media/work/sanad-yomor-alek.mp4", "/media/work/sanad-yomor-alek.jpg"],
+      ["sanad-collaboration", "motion", "Sanad — Collaboration requests", "/media/work/sanad-collaboration.mp4", "/media/work/sanad-collaboration.jpg"],
+      ["qatar-architecture-web", "motion", "Qatar — Architecture film excerpt", "/media/work/qatar-architecture-web.mp4", "/media/work/qatar-architecture.jpg"],
+      ["sanad-screen", "social", "The screen that shows who sold — Sanad Platform", "/media/work/sanad-screen.mp4", "/media/work/sanad-screen.jpg"],
+      ["madina-quran-explainer", "motion", "Madina Quran App — Feature explainer", "/media/work/madina-quran-explainer.mp4", "/media/work/madina-quran-explainer.jpg"],
+      ["sanad-campaign-motion", "motion", "Sanad — Campaign dashboard", "/media/work/sanad-campaign-motion.mp4", "/media/work/sanad-campaign-motion.jpg"],
+      ["mosaly-ai1", "ai", "Al Mosaly app — Video 1", "/media/work/mosaly-ai1.mp4", "/media/work/mosaly-ai1.jpg"],
+      ["madina-app-launch", "ads", "Madina Quran App — Launch promo", "/media/work/madina-app-launch.mp4", "/media/work/madina-app-launch.jpg"],
+      ["stp-sufra", "motion", "Sufra — Recipe video", "/media/work/stp-sufra.mp4", "/media/work/stp-sufra.jpg"],
+      ["sanad-social-score", "motion", "Sanad — Smart Social Score", "/media/work/sanad-social-score.mp4", "/media/work/sanad-social-score.jpg"],
+      ["mosaly-ai2", "ai", "Al Mosaly app — Video 2", "/media/work/mosaly-ai2.mp4", "/media/work/mosaly-ai2.jpg"],
+      ["hook-sanad-drop", "hooks", "Hook: Sanad character drops in", "/media/work/hook-sanad-drop.mp4", "/media/work/hook-sanad-drop.jpg"],
+      ["sanad-3steps", "social", "Three Steps — Sanad Platform", "/media/work/sanad-3steps.mp4", "/media/work/sanad-3steps.jpg"],
+      ["madina-quran-memorization", "motion", "Madina Quran App — Memorization sessions", "/media/work/madina-quran-memorization.mp4", "/media/work/madina-quran-memorization.jpg"],
+      ["sanad-white-friday", "social", "White Friday — Sanad Platform", "/media/work/sanad-white-friday.mp4", "/media/work/sanad-white-friday.jpg"],
+      ["pepsi", "social", "Sanad Platform — Earn smarter", "/media/work/pepsi.mp4", "/media/work/pepsi.jpg"],
+      ["abnaouna", "charity", "Abnaouna — Embracing orphans", "/media/work/abnaouna.mp4", "/media/work/abnaouna.jpg"],
+      ["microsoft", "social", "Sanad Platform — The Sanad character", "/media/work/microsoft.mp4", "/media/work/microsoft.jpg"],
+      ["mashareq-hajj", "charity", "Mashareq — The hardest Hajj years", "/media/work/mashareq-hajj.mp4", "/media/work/mashareq-hajj.jpg"],
+      ["sanad-lies", "social", "They’re Lying to You — Sanad Platform", "/media/work/sanad-lies.mp4", "/media/work/sanad-lies.jpg"],
+      ["brand-watch", "ads", "Watch brand ad", "/media/work/brand-watch.mp4", "/media/work/brand-watch.jpg"],
+      ["mastoura", "charity", "Mastoura — Water for pilgrims", "/media/work/mastoura.mp4", "/media/work/mastoura.jpg"],
+      ["glubran-tiss", "ads", "Glubran Tiss 2 — Product commercial", "/media/work/glubran-tiss.mp4", "/media/work/glubran-tiss.jpg"],
+      ["qatami", "charity", "Hail Charity — Sheikh Nasser Al-Qatami", "/media/work/qatami.mp4", "/media/work/qatami.jpg"],
+      ["sanad-35", "social", "35 Influencers — Sanad Platform", "/media/work/sanad-35.mp4", "/media/work/sanad-35.jpg"],
+      ["mashareq-voice", "voice", "Mashareq — Voice-over", "/media/work/mashareq-voice.mp4", "/media/work/mashareq-voice.jpg"],
+      ["hail", "charity", "Hail Quran School", "/media/work/hail.mp4", "/media/work/hail.jpg"],
+      ["yt-01", "motion", "MOVA Creative — Production reel", "/media/yt-01/yt-01.mp4", "/media/yt-01/poster.jpg"],
     ];
     const YT = [["FA2OTE4j2kc", "Fanz", 60], ["zEajkyEsP6E", "Sheikh Zayed Festival", 58], ["H-c9EJ1zqzw", "Leadership Innovation Forum", 67], ["sjzf-C7q43Y", "Al Arish Building", 146], ["-JZdejhYfYo", "The UAE", 134], ["8wf3LYC-Pro", "Aviation & Climate Change", 126], ["ka6kppyrpg0", "NEO", 48], ["rBd-zBpXR8w", "Al Muraihana", 104], ["a-UUB3VM9QM", "Chocolate", 322], ["q8XvHutUTeI", "Who is Mohamed bin Zayed, the new UAE President?", 161], ["gvlRMBKgszQ", "No way you don’t want it?", 25], ["FZXRECUIq6U", "Qatar Boats", 72], ["X-bw82aRv2I", "Coco Chanel", 276], ["XOgFw7A9b4k", "Donate", 21], ["v9oL6JrLzEw", "Ursla", 21], ["wbq7n9LqiWE", "GOUI", 61], ["LoChLU26UoU", "Orphan Sponsor", 21], ["eLrtkYj_80U", "Recitation", 46], ["nGFL3SbjAUM", "Dr. Sultan", 182], ["vCnmRisZo3M", "News bulletin", 88], ["EwVhu-eoah4", "Mlay 2", 22], ["8y3d2Q-BwEg", "Short animation", 9], ["9ETIi0EbKok", "Mlay", 26], ["TLp5kQ6K30o", "Makkah video", 20], ["rmpJdFkcuuQ", "Thomas Edison", 209], ["hTtvOQ3e_xI", "The ideal temperature", 52], ["0tSgO-IxCgQ", "UAE, a global hub for thinkers and creators", 17], ["4Yn8Q3U2LfY", "Audio piece", 29], ["Jmlbz44pMTg", "Nasr", 51], ["kWsK3kdO9gQ", "Turkey earthquake 🇹🇷", 66], ["CTxbruFFnNc", "Dubai, a destination for sports, even esports", 91], ["O2Y9ol8m9kU", "Why masks matter", 30], ["KXzBSiURAXM", "Sheikh Maher Al-Muaiqly", 52], ["OidiT-wVO54", "UAE, a line of defense", 91], ["yL_lWzDUgsY", "Dr. Reem", 54], ["PBDKZAgUq1U", "Sheikh Yasser Al-Dosari", 59], ["sMSZbVUDwhY", "Al Khalidi Hospital", 65], ["kkGCiTG6ltc", "Sheikh Mahmoud Khalil Al-Hussary", 23], ["s8_Yv8R339A", "Sheikh Saud Al-Shuraim", 38], ["V2mPQlxPiSY", "Sheikh Mohamed Refaat", 61]];
     const items = [
@@ -694,7 +694,7 @@
     const grid = document.getElementById('work-grid'), empty = document.getElementById('work-empty'), moreBtn = document.getElementById('more');
     const PAGE = matchMedia('(min-width: 1001px)').matches ? 9 : matchMedia('(min-width: 721px)').matches ? 8 : 6; let shown = PAGE, filter = 'all', query = '';
     const esc = (t) => t.replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-    const catName = {ai:'AI',hooks:'Hook',ads:'Ad',charity:'Charity',social:'Social',motion:'Motion',voice:'Voice',youtube:'YouTube'};
+    const catName = {ai:'Visuals',hooks:'Hook',ads:'Ad',charity:'Charity',social:'Social',motion:'Motion',voice:'Voice',youtube:'YouTube'};
     const touch = matchMedia('(hover: none)').matches;
     const vio = new IntersectionObserver((es) => es.forEach((e) => { const v = e.target;
       (e.isIntersecting && !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden) ? v.play().catch(() => {}) : v.pause(); }), { threshold: .6 });
