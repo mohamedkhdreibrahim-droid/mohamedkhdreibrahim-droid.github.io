@@ -2,8 +2,11 @@
 
 لا تُنشر على الموقع (مجلد `scripts/` مستثنى في `cf-build.sh`).
 
-**التثبيت على الـ Mac:** `bash scripts/install-mac.sh`
-ثم أعد تشغيل After Effects.
+**التثبيت:**
+- Windows: انقر مرتين على `scripts/install-windows.cmd` (يسأل عن صلاحية المسؤول، ويسأل عن المفاتيح اختيارياً)
+- Mac: `bash scripts/install-mac.sh`
+
+ثم أعد تشغيل After Effects و Claude Desktop.
 
 ## اللوحات (`panels/` → قائمة Window)
 | الملف | الوظيفة |
