@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/YOUR_MAC_USERNAME/Desktop/MotionProjects"
+      ]
+    },
+    "after-effects": {
+      "command": "npx",
+      "args": ["-y", "after-effects-mcp"]
+    },
+    "replicate": {
+      "command": "npx",
+      "args": ["-y", "replicate-mcp"],
+      "env": {
+        "REPLICATE_API_TOKEN": "PASTE_YOUR_REPLICATE_TOKEN_HERE"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@brave/brave-search-mcp-server"],
+      "env": {
+        "BRAVE_API_KEY": "PASTE_YOUR_BRAVE_KEY_HERE"
+      }
+    },
+    "fetch-web": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "elevenlabs": {
+      "command": "uvx",
+      "args": ["elevenlabs-mcp"],
+      "env": {
+        "ELEVENLABS_API_KEY": "PASTE_YOUR_ELEVENLABS_KEY_HERE"
+      }
+    }
+  }
+}
