@@ -5,3 +5,9 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Collage skill assets and examples: personal copies, not for publishing
+public/collage/paper.jpg
+public/collage/beats/radio.json
+public/collage/images/
+public/collage/sfx/

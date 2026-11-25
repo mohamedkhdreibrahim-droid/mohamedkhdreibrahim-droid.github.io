@@ -1,0 +1,31 @@
+{
+ "name": "Cinema Demo",
+ "palette": "paper_white",
+ "duration": 11.0,
+ "script": "سنة 1896، أول عرض سينما في القاهرة. الناس قعدت قدام شاشة بيضا. وبعد خمسين سنة، السينما بقت في كل شارع.",
+ "images": {
+  "first_show": {"kind": "print", "prompt": "Grainy black and white archival press photograph, 1896: audience seen from behind facing a small white projection screen in a dim hall, documentary photojournalism, film grain, wide horizontal 16:9 frame, no readable text, no watermark"},
+  "projector": {"kind": "print", "prompt": "Grainy black and white archival photograph, 1890s: an antique hand-cranked film projector on a wooden stand, whole object visible, documentary photograph, film grain, wide horizontal 16:9 frame, no readable text, no watermark"},
+  "street_cinema": {"kind": "print", "prompt": "Grainy black and white archival press photograph, 1946: people walking past a busy street cinema entrance at dusk, seen from far away, documentary photojournalism, film grain, wide horizontal 16:9 frame, no readable text, no watermark"}
+ },
+ "sfx": [
+  {"at": 0.30, "file": "universfield-cinematic-impact-hit-352702.mp3", "volume": 0.5},
+  {"at": 0.95, "file": "whoosh_cine.mp3", "volume": 0.45},
+  {"at": 2.75, "file": "soundreality-whoosh-large-sub-384631.mp3", "volume": 0.55},
+  {"at": 5.90, "file": "universfield-cinematic-piano-hit-567216.mp3", "volume": 0.45},
+  {"at": 7.60, "file": "whoosh_cine.mp3", "volume": 0.45}
+ ],
+ "scenes": [
+  {"recipe": "print_opener", "name": "1896", "start": 0.0, "kicker": "سنة", "kicker_at": 0.12, "big": "1896", "big_at": [0.3, 1.0],
+   "prints": [{"image": "first_show", "caption": "أول عرض في القاهرة", "at": 0.95, "caption_at": 2.0},
+              {"image": "projector", "caption": "آلة العرض", "at": 1.9, "caption_at": 2.1}],
+   "travel": [0.85, 1.75], "exit": "dive", "dive_to": "a"},
+  {"recipe": "photo_full", "name": "Screen", "start": 3.25, "image": "first_show", "push_to": [0.5, 0.4],
+   "labels": [{"text": "شاشة بيضا", "point": [0.5, 0.3], "box": [0.78, 0.2], "at": 0.5},
+              {"text": "الناس", "point": [0.3, 0.7], "box": [0.36, 0.55], "at": 1.3}]},
+  {"recipe": "kinetic_paper", "name": "Fifty years", "start": 6.0, "text": "وبعد خمسين سنة", "words": [0.0, 0.35, 0.7], "underline_at": 0.95},
+  {"recipe": "print_line", "name": "Street", "start": 7.6, "transition": "torn",
+   "print": {"image": "street_cinema", "caption": "سينما في الشارع، 1946"},
+   "line": "السينما بقت في كل شارع", "words": [0.3, 0.75, 1.1, 1.4, 1.7]}
+ ]
+}

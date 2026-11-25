@@ -1,9 +1,26 @@
 import { Composition, Folder } from "remotion";
 import { DualThemeReel, dualThemeReelSchema } from "./reels/DualThemeReel";
+import { STORY_DURATION, StoryReel, storyReelSchema } from "./reels/StoryReel";
+import { BeatsVideo, beatsVideoSchema, calculateBeatsMetadata } from "./collage/BeatsVideo";
 
 // ريلز 9:16 — 30fps — 6 ثوانٍ (إيقاعان كل منهما 3 ثوانٍ)
 export const RemotionRoot: React.FC = () => {
   return (
+    <>
+    {/* أسلوب الكولاج الورقي: فيديو واحد لكل beats.json في public/collage/beats — 16:9، 24fps، رسم على اثنين */}
+    <Folder name="Collage">
+      <Composition
+        id="Collage"
+        component={BeatsVideo}
+        schema={beatsVideoSchema}
+        calculateMetadata={calculateBeatsMetadata}
+        durationInFrames={420}
+        fps={24}
+        width={1920}
+        height={1080}
+        defaultProps={{ beatsFile: "collage/beats/demo.json" }}
+      />
+    </Folder>
     <Folder name="Reels">
       <Composition
         id="Reel-Editorial"
@@ -47,6 +64,33 @@ export const RemotionRoot: React.FC = () => {
           audioFile: "",
         }}
       />
+      {/* ريل قصصي 12 ثانية: 4 إيقاعات × 3 ثوانٍ بقطعات Match-Cut */}
+      <Composition
+        id="Reel-Story"
+        component={StoryReel}
+        schema={storyReelSchema}
+        durationInFrames={STORY_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          stat: 70,
+          statSuffix: "%",
+          statLine: "من الشركات الكبرى غيّرت طريقة عملها",
+          hookBar: "والسبب ليس التقنية",
+          headline: "لماذا يتحول الجميع إلى العمل الصامت؟",
+          headlineHighlight: "العمل الصامت؟",
+          body: "أنظمة تعمل بدقة دون اجتماعات لا تنتهي، ودون ضجيج يستهلك الوقت.",
+          quoteLabel: "اقتباس",
+          quote: "«السرعة الحقيقية لا تعني الضجيج، بل بناء أنظمة تعمل دون تدخل مستمر.»",
+          quoteSource: "تقرير تحليلي — 2026",
+          cta: "تابع السلسلة",
+          ctaBar: "الحلقة القادمة غداً",
+          counter: "01 / 04",
+          audioFile: "",
+        }}
+      />
     </Folder>
+    </>
   );
 };
