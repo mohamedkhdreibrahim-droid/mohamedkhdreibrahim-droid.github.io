@@ -1,10 +1,26 @@
 import { Composition, Folder } from "remotion";
 import { DualThemeReel, dualThemeReelSchema } from "./reels/DualThemeReel";
 import { STORY_DURATION, StoryReel, storyReelSchema } from "./reels/StoryReel";
+import { BeatsVideo, beatsVideoSchema, calculateBeatsMetadata } from "./collage/BeatsVideo";
 
 // ريلز 9:16 — 30fps — 6 ثوانٍ (إيقاعان كل منهما 3 ثوانٍ)
 export const RemotionRoot: React.FC = () => {
   return (
+    <>
+    {/* أسلوب الكولاج الورقي: فيديو واحد لكل beats.json في public/collage/beats — 16:9، 24fps، رسم على اثنين */}
+    <Folder name="Collage">
+      <Composition
+        id="Collage"
+        component={BeatsVideo}
+        schema={beatsVideoSchema}
+        calculateMetadata={calculateBeatsMetadata}
+        durationInFrames={420}
+        fps={24}
+        width={1920}
+        height={1080}
+        defaultProps={{ beatsFile: "collage/beats/demo.json" }}
+      />
+    </Folder>
     <Folder name="Reels">
       <Composition
         id="Reel-Editorial"
@@ -75,5 +91,6 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
     </Folder>
+    </>
   );
 };
